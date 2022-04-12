@@ -4,6 +4,9 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    $_SESSION["user"] = $username;
+    $_SESSION["pass"] = $password;
+
     include('dbconnection.php');
 
     $query = "SELECT * from login WHERE login_username='$username' AND login_password = '$password'";
@@ -14,8 +17,7 @@
 
         if($count == 1){  
             ob_start();
-            //header("Location: student_dashboard.php");
-            //header("Location: instructor_dashboard.php");
+            header("Location: user_authentication.php");
             ob_end_flush(); 
         }  
         else{  
