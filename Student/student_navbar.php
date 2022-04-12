@@ -20,7 +20,7 @@
             <a href="#">OnlineSesh</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span></a></li>
+        <li><a href="../User/user_logout.php"><span class="glyphicon glyphicon-log-out"></span></a></li>
         </ul>
         
     </div>
