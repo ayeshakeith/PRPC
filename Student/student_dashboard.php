@@ -59,7 +59,7 @@
 
             <div class="container d-flex justify-content-center text-center" style="font-family: Poppins;">
             <div class="row">
-                <div class="col-md-4" style="background-color: #ffd599; color:#003d60; border-right:1px solid black;">
+                <div class="col-md-4" style="background-color: white; color:#003d60; border-right:1px solid black;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
@@ -78,7 +78,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4" style="background-color: #ffd599; color:#003d60;border-right: 1px solid black;">
+                <div class="col-md-4" style="background-color: white; color:#003d60;border-right: 1px solid black;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
@@ -97,7 +97,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4" style="background-color: #ffd599; color:#003d60;">
+                <div class="col-md-4" style="background-color: white; color:#003d60;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
@@ -122,9 +122,31 @@
           <br><br>
 
             <div class="container" style="text-align: center; background-color:white; width: 60%; border:10px solid black;">
-            <h1>To-Do List</h1>
-            <hr style="width: 50%; border-color: black">
-            
+                <h1>To-Do List</h1>
+                <hr style="width: 50%; border-color: black">
+
+                <ul class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action">
+                        Class Name
+                        <span class="badge badge-primary badge-pill">10</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        Class Name
+                        <span class="badge badge-primary badge-pill">20</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        Class Name
+                        <span class="badge badge-primary badge-pill">30</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        Class Name
+                        <span class="badge badge-primary badge-pill">40</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        Class Name
+                        <span class="badge badge-primary badge-pill">50</span>
+                    </button>
+                </ul>
             </div>
 
     </body>
