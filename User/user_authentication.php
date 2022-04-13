@@ -6,7 +6,7 @@
     $user = $_SESSION["user"];
     $pass = $_SESSION["pass"];
 
-    $query = "SELECT * from login WHERE login_username='$user' AND login_password = '$pass'";
+    $query = "SELECT * from user_login WHERE username='$user' AND password = '$pass'";
 
     $result = mysqli_query($con, $query);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  

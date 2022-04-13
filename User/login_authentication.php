@@ -9,7 +9,7 @@
 
     include('dbconnection.php');
 
-    $query = "SELECT * from login WHERE login_username='$username' AND login_password = '$password'";
+    $query = "SELECT * from user_login WHERE username='$username' AND password = '$password'";
 
     $result = mysqli_query($con, $query);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
