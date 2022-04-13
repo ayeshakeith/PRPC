@@ -1,6 +1,6 @@
 <div class="container d-flex justify-content-center text-center" style="font-family: Poppins;">
             <div class="row">
-                <div class="col-md-4" style="background-color: #fff9f5; color:#003d60; border-right:1px solid black; border-bottom:1px solid black; padding:2rem;">
+                <div class="col-md-4" style="background-color: white; color:#003d60; border-right:1px solid black; border:1px solid black; padding:2rem;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
@@ -43,7 +43,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4" style="background-color: #fff9f5; color:#003d60;border-right: 1px solid black; border-bottom:1px solid black; padding:2rem;">
+                <div class="col-md-4" style="background-color: white; color:#003d60; border: 1px solid black; border-bottom:1px solid black; padding:2rem;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
@@ -98,7 +98,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4" style="background-color: #fff9f5; color:#003d60; border-bottom:1px solid black; padding:2rem;">
+                <div class="col-md-4" style="background-color: white; color:#003d60; border:1px solid black; padding:2rem;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
@@ -155,7 +155,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4" style="background-color: #fff9f5; color:#003d60; border-right:1px solid black; padding:2rem;">
+                <div class="col-md-4" style="background-color: white; color:#003d60; border:1px solid black; padding:2rem;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
@@ -210,7 +210,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4" style="background-color: #fff9f5; color:#003d60;border-right: 1px solid black; padding:2rem;">
+                <div class="col-md-4" style="background-color: white; color:#003d60; border: 1px solid black; padding:2rem;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
@@ -265,7 +265,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4" style="background-color: #fff9f5; color:#003d60; padding:2rem;">
+                <div class="col-md-4" style="background-color: white; color:#003d60; padding:2rem; border: 1px solid black;">
                   <div class="card" style="width: 100%">
                     <div class="card-body">
                       <br>
