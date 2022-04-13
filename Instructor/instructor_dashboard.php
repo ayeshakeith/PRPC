@@ -26,18 +26,24 @@
                 <a href="#weeklyschedule"><span class="glyphicon glyphicon-chevron-down"></span></a>
             </div>
             
-            
 
             <div class="container" id="weeklyschedule" style="text-align: center; background-color:#fff9f5; margin-top:-20px; position: relative; z-index: 0px; width: 60%; padding:10rem;">
               <h1 class='heading'>Weekly Schedule</h1>
               <br><br><br>
-              <p class="mb-0">"Teaching is the greatest impact of optimism"</p>
-              <footer class="blockquote-footer">Colleen Wilcox</footer>
+              <p class="mb-0" style="color: black;">"Teaching is the greatest impact of optimism"</p>
+              <footer style="color: black;" class="blockquote-footer">Colleen Wilcox</footer>
             </div>
 
             <br>
 
-            <?php include('instructor_weeklyschedule.php'); ?>
+            <div class="container" style="text-align: center; color: black;">
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#bm1">BM1</a></li>
+                    <li><a data-toggle="pill" href="#bm2">BM2</a></li>
+                </ul>
+                
+                <?php include('instructor_weeklyschedule.php'); ?>
+            </div>
 
             <footer class="footer-container"> </footer>
     </body>
