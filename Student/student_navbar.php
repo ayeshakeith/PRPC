@@ -20,7 +20,7 @@
     <div class="container-fluid" style="background-color: #f1ece9;">
         <ul class="nav navbar-nav">
         <li><a href="#" style="color: #003d60;">Home</a></li>
-        <li><a href="#" style="color: #003d60;">Courses</a></li>
+        <li><a href="student_mycourses.php" style="color: #003d60;">Courses</a></li>
         <li><a href="#" style="color: #003d60;">Learning Tools</a></li>
         </ul>
         <div class="topnav-centered">
