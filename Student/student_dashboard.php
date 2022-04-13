@@ -47,32 +47,7 @@
 
           <br>
 
-            <div class="container" style="text-align: center; background-color:#fff9f5; width: 60%; padding:10rem;">
-            <h1 class='heading'>To-Do List</h1>
-            <br><br><br><br>
-                <ul class="list-group">
-                    <button type="button" class="list-group-item list-group-item-action">
-                        Class Name
-                        <span class="badge badge-primary badge-pill">10</span>
-                    </button>
-                    <button type="button" class="list-group-item list-group-item-action">
-                        Class Name
-                        <span class="badge badge-primary badge-pill">20</span>
-                    </button>
-                    <button type="button" class="list-group-item list-group-item-action">
-                        Class Name
-                        <span class="badge badge-primary badge-pill">30</span>
-                    </button>
-                    <button type="button" class="list-group-item list-group-item-action">
-                        Class Name
-                        <span class="badge badge-primary badge-pill">40</span>
-                    </button>
-                    <button type="button" class="list-group-item list-group-item-action">
-                        Class Name
-                        <span class="badge badge-primary badge-pill">50</span>
-                    </button>
-                </ul>
-            </div>
+            <?php include('student_todolist.php'); ?>
 
     </body>
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2022 at 08:41 AM
+-- Generation Time: Apr 13, 2022 at 09:36 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -62,7 +62,9 @@ INSERT INTO `course` (`course_id`, `course_name`, `course_instructor`, `course_s
 
 CREATE TABLE `deliverable` (
   `deliverable_id` int(11) NOT NULL,
-  `deliverable_title` varchar(100) NOT NULL,
+  `course_name` varchar(100) NOT NULL,
+  `course_section` varchar(100) NOT NULL,
+  `deliverable_title` varchar(200) NOT NULL,
   `deliverable_description` varchar(500) NOT NULL,
   `deliverable_duedate` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -71,8 +73,13 @@ CREATE TABLE `deliverable` (
 -- Dumping data for table `deliverable`
 --
 
-INSERT INTO `deliverable` (`deliverable_id`, `deliverable_title`, `deliverable_description`, `deliverable_duedate`) VALUES
-(1, 'Activity 1.1', 'Create a C++ program that will generate 10 random integers between 1-10 (repeatable). Copy codes into a .txt file and submit.', '01 May 2022 - 11:59 PM');
+INSERT INTO `deliverable` (`deliverable_id`, `course_name`, `course_section`, `deliverable_title`, `deliverable_description`, `deliverable_duedate`) VALUES
+(1, 'CS126L', 'BM1', 'Programming Activity 1', 'Create a C++ program that will generate 10 random integers between 1-10 (repeatable). Copy codes into a .txt file and submit.', '01 May 2022 - 11:59 PM'),
+(2, 'CS126L', 'BM2', 'Programming Activity 1', 'Create a C++ program that will generate 10 random integers between 1-10 (repeatable). Copy codes into a .txt file and submit.', '01 May 2022 - 11:59 PM'),
+(3, 'IT145L', 'BM1', 'Assessment No. 1', 'Upload a .txt file containing your name in this format: Last Name, First Name, Middle Initial', '25 April 2022 - 12:00 PM'),
+(4, 'IT145L', 'BM2', 'Assessment No. 1', 'Upload a .txt file containing your name in this format: Last Name, First Name, Middle Initial', '25 April 2022 - 12:00 PM'),
+(5, 'GED145', 'BM1', 'Reading Activity 1', 'Just read the first chapter of the assigned book for this class, and upload a .txt file containing your 5-sentence summary.', '20 April 2022 - 11:59 PM'),
+(6, 'GED145', 'BM2', 'Reading Activity 1', 'Just read the first chapter of the assigned book for this class, and upload a .txt file containing your 5-sentence summary.', '20 April 2022 - 11:59 PM');
 
 -- --------------------------------------------------------
 
@@ -155,7 +162,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `deliverable`
 --
 ALTER TABLE `deliverable`
-  MODIFY `deliverable_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `deliverable_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_login`
