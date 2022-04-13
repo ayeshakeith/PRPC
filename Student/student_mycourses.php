@@ -40,7 +40,7 @@
 
             .container-courses{
                 margin: 0 auto;
-                margin-top:-65px;
+                margin-top:-60px;
                 width: 80%;
                 height: 150%;
             }
@@ -84,7 +84,7 @@
             </div>
 
             <br><br><br><br>
-            
+
             <div class="container-mycourses">
                 <h1>My Courses</h1>
             </div>
