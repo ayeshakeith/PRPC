@@ -34,14 +34,14 @@
               <footer style="color: black;" class="blockquote-footer">Colleen Wilcox</footer>
             </div>
 
-            <br>
+            <br><br>
 
             <div class="container" style="text-align: center; color: black;">
-                <ul class="nav nav-pills">
+                <ul class="nav nav-pills nav-justified">
                     <li class="active"><a data-toggle="pill" href="#bm1">BM1</a></li>
                     <li><a data-toggle="pill" href="#bm2">BM2</a></li>
                 </ul>
-                
+                <br><br>
                 <?php include('instructor_weeklyschedule.php'); ?>
             </div>
 
