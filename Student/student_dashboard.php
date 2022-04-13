@@ -20,7 +20,7 @@
             <?php include('student_navbar.php'); ?>
 
             <div class="container1">
-              <img src="../Student/img/studentdashboardheader.jpg" style="width:100%;">
+              <img src="../Student/img/student_dashboardheader.jpg" style="width:100%;">
               <div class="centered">
                 <h2> Online Classes From Everywhere </h2> <br><br> 
                 <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-play"></span> Play Video </button> </div>

@@ -16,6 +16,7 @@
     $count = mysqli_num_rows($result);  
 
         if($count == 1){  
+            $_SESSION["name"] = $row["firstname"] . " " . $row["lastname"];
             ob_start();
             header("Location: user_authentication.php");
             ob_end_flush(); 
