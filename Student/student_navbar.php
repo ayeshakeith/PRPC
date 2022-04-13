@@ -1,4 +1,11 @@
 <style>
+            .navbar-sticky{
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 2;
+            }
+
             .topnav-centered a {
             float: none;
             position: absolute;
@@ -9,7 +16,7 @@
             }
 </style>
 
-<nav class="navbar navbar-inverse" style="border-bottom: 0px; margin-bottom:0px;">
+<nav class="navbar navbar-inverse navbar-sticky" style="border-bottom: 0px; margin-bottom:0px;">
     <div class="container-fluid" style="background-color: #f1ece9;">
         <ul class="nav navbar-nav">
         <li><a href="#" style="color: #003d60;">Home</a></li>
