@@ -24,7 +24,7 @@
         <li><a href="#" style="color: #003d60;">Learning Tools</a></li>
         </ul>
         <div class="topnav-centered">
-            <a href="#">OnlineSesh</a>
+            <a href="#"><span class="glyphicon glyphicon-education"></span> OnlineSesh</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
         <li><a href="../User/user_logout.php"><span class="glyphicon glyphicon-log-out"></span></a></li>
