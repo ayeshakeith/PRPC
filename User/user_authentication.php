@@ -20,6 +20,7 @@
                 ob_end_flush(); 
             }
             else{
+                $_SESSION["section"] = $row["section"];
                 ob_start();
                 header("Location: ../Student/student_dashboard.php");
                 ob_end_flush(); 

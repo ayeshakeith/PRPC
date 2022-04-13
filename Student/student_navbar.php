@@ -16,7 +16,7 @@
             }
 </style>
 
-<nav class="navbar navbar-inverse navbar-sticky" style="border-bottom: 0px; margin-bottom:0px;">
+<nav class="navbar navbar-inverse navbar-static-top navbar-sticky" style="border-bottom: 0px; margin-bottom:0px;">
     <div class="container-fluid" style="background-color: #f1ece9;">
         <ul class="nav navbar-nav">
         <li><a href="student_dashboard.php" style="color: #003d60;">Home</a></li>
