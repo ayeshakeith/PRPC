@@ -1,4 +1,7 @@
 <style>
+            html {
+              scroll-behavior: smooth;
+            }
             .grid-container {
             display: grid;
             grid-template-columns: auto auto auto auto;

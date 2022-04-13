@@ -23,17 +23,12 @@
               <img src="../Instructor/img/instructor_dashboardheader.jpg" style="width:100%;">
               <div class="centered">
                 <h2> Online Classes From Everywhere </h2> <br><br> 
-                <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-play"></span> Play Video </button> </div>
+                <a href="#weeklyschedule"><span class="glyphicon glyphicon-chevron-down"></span></a>
             </div>
             
-            <div class="grid-container">
-                <div class="grid-item"><iframe style="width: 100%;" src="https://www.youtube.com/embed/BnxfuvRHKDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="grid-item"><iframe style="width: 100%;" src="https://www.youtube.com/embed/3B8g1RsZrlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="grid-item"><iframe style="width: 100%;" src="https://www.youtube.com/embed/nyVOi3X53bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="grid-item"><iframe style="width: 100%;" src="https://www.youtube.com/embed/lDeFSOUHdH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
+            
 
-            <div class="container" style="text-align: center; background-color:#fff9f5; margin-top:-20px; position: relative; z-index: 0px; width: 60%; padding:10rem;">
+            <div class="container" id="weeklyschedule" style="text-align: center; background-color:#fff9f5; margin-top:-20px; position: relative; z-index: 0px; width: 60%; padding:10rem;">
               <h1 class='heading'>Weekly Schedule</h1>
               <br><br><br>
               <p class="mb-0">"Teaching is the greatest impact of optimism"</p>
