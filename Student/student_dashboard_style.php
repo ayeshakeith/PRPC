@@ -64,4 +64,13 @@
                 auto calc(var(--underline-width) * 1px);
             }
 
+            .footer-container{
+                background-color: #130d4c;
+                margin-top: 20%;
+                width: 100%;
+                height: 5vh;
+                color: white;
+
+            }
+
 </style>

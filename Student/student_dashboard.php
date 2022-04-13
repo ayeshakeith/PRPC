@@ -45,9 +45,10 @@
 
             <?php include('student_weeklyschedule.php'); ?>
 
-          <br>
+            <br>
 
             <?php include('student_todolist.php'); ?>
 
+            <footer class="footer-container"> </footer>
     </body>
 </html>
