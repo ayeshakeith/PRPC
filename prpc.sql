@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2022 at 01:21 PM
+-- Generation Time: Apr 14, 2022 at 05:01 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -102,7 +102,14 @@ INSERT INTO `deliverable` (`deliverable_id`, `course_name`, `course_section`, `d
 (3, 'IT145L', 'BM1', 'Assessment No. 1', 'Upload a .txt file containing your name in this format: Last Name, First Name, Middle Initial', '25 April 2022 - 12:00 PM'),
 (4, 'IT145L', 'BM2', 'Assessment No. 1', 'Upload a .txt file containing your name in this format: Last Name, First Name, Middle Initial', '25 April 2022 - 12:00 PM'),
 (5, 'GED145', 'BM1', 'Reading Activity 1', 'Just read the first chapter of the assigned book for this class, and upload a .txt file containing your 5-sentence summary.', '20 April 2022 - 11:59 PM'),
-(6, 'GED145', 'BM2', 'Reading Activity 1', 'Just read the first chapter of the assigned book for this class, and upload a .txt file containing your 5-sentence summary.', '20 April 2022 - 11:59 PM');
+(6, 'GED145', 'BM2', 'Reading Activity 1', 'Just read the first chapter of the assigned book for this class, and upload a .txt file containing your 5-sentence summary.', '20 April 2022 - 11:59 PM'),
+(7, 'CS126L', 'BM1', 'Homework 1.1: String Input and Output', 'Create a C++ program that allows the user to input a string type of text and after, outputs the entered string.', '29 April 2022 - 12:30 PM'),
+(8, 'GED120', 'BM1', 'Short Essay Part 1', 'Write an essay about your childhood experiences and how such shaped you to be the man or the woman that you are today. Minimum words of 1000. Text should be justified, using TNR size 12.', '13 May 2022 - 7:00 AM'),
+(9, 'GED120', 'BM2', 'Short Essay Part 1', 'Write an essay about your childhood experiences and how such shaped you to be the man or the woman that you are today. Minimum words of 1000. Text should be justified, using TNR size 12.', '13 May 2022 - 7:00 AM'),
+(10, 'CS145', 'BM1', 'Short Research', 'Research about the history of Computer Science. Minimum of 5 pages. Make sure to include citations. Add some images as well for reference.', '28 April 2022 - 8:00 AM'),
+(11, 'CS145', 'BM2', 'Short Research', 'Research about the history of Computer Science. Minimum of 5 pages. Make sure to include citations. Add some images as well for reference.', '28 April 2022 - 8:00 AM'),
+(12, 'IT180L', 'BM1', 'Assignment 1.1', 'Define what networking technologies are, and provide examples. Put it in a Microsoft PowerPoint presentation and send the PDF version.', '13 May 2022 - 7:30 AM'),
+(13, 'IT180L', 'BM2', 'Assignment 1.1', 'Define what networking technologies are, and provide examples. Put it in a Microsoft PowerPoint presentation and send the PDF version.', '13 May 2022 - 7:30 AM');
 
 -- --------------------------------------------------------
 
@@ -185,7 +192,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `deliverable`
 --
 ALTER TABLE `deliverable`
-  MODIFY `deliverable_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `deliverable_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user_login`
