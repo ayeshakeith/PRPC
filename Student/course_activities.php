@@ -163,7 +163,7 @@
             <div class="content">
                     <div class="student-sidebar">
                         <!-- Hello, User is located in student_sidebar.php -->
-                        <?php include('student_sidebar.php'); ?> 
+                        <?php include('course_sidebar.php'); ?> 
                     </div>
 
                     <div class="banner-area">
@@ -172,36 +172,42 @@
                     
                     <div class="content-area">
                         <div class="content-box">
-                            <br>
-                            <h2 style="text-align: center"> Activity # </h2>
-
-                            <br>
-
-                            <p style=" margin-left: 25px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-
-                            <p style=" margin-left: 25px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-
-                            <br>
-
-                            <!-- this is where to call the submitted file of the teacher -->
-                            <span style=" margin-left: 25px; color: gray"> Attached Files: </span> <a href="#"> file.pdf </a>
                             
+                        <div class="list-group">
+
+                        <?php 
+                        include('activities_authentication.php');
+                        
+                        ?>
+                            
+                        <a href="course_viewactivity.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                            <u><h4 class="mb-1"><?php echo $row["deliverable_title"]; ?></h4></u>
+                            <small> Deadline: <?php echo $row["deliverable_duedate"]; ?></small>
+                            </div>
                             <br>
+                            <p class="mb-1"><?php echo $row["deliverable_description"]; ?></p>
+                        </a>
+                        
+                        <?php ?>
 
-                            <p style="margin-top: 50px; margin-left: 25px; color: gray">Click on the "Choose File" button to upload a file:</p>
+                        <?php 
+                        include('activities_authentication.php');
+                        while($row = mysqli_fetch_assoc($result)) {
+                        ?>
 
-                            <form action="student_previewactivity.php" method="post" enctype="multipart/form-data">
-                            <input type="file" id="actfile" name="actfile" style=" margin-left: 25px;">
-                            <div class="align-center"> <input type="submit" name="submit" value="Submit File"> </div>
-                            </form>
+                        <a href="course_viewactivity.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                            <u><h4 class="mb-1"><?php echo $row["deliverable_title"]; ?></h4></u>
+                            <small> Deadline: <?php echo $row["deliverable_duedate"]; ?></small>
+                            </div>
+                            <br><br>
+                            <p class="mb-1"><?php echo $row["deliverable_description"]; ?></p>
+                        </a>
+                        
+                        <?php } ?>
+
+                        </div>
 
                         </div>
                     </div>
