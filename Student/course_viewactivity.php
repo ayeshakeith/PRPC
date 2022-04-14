@@ -167,40 +167,32 @@
                     </div>
 
                     <div class="banner-area">
-                        <h1> <?php echo $_POST["coursename"]; ?> </h1>
+                        <h1> <?php echo $_SESSION["coursecode"]; ?> </h1>
                     </div>
                     
                     <div class="content-area">
-                        <div class="content-box">
+                        <div class="content-box" style="padding:10px;">
                             
                             <br>
-                            <h2 style="text-align: center"> Activity # </h2>
+                            <h2 style="text-align: center"> <?php echo $_POST["activitytitle"]; ?> </h2>
 
-                            <br>
+                            <hr style="width: 80%;">
 
-                            <p style=" margin-left: 25px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
+                            <br><br>
 
-                            <p style=" margin-left: 25px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <p style="text-align:justify; margin-right:50px; margin-left:50px;">
+                            <?php echo $_POST["activitydescription"]; ?>
                             </p>
 
                             <br>
 
                             <!-- this is where to call the submitted file of the teacher -->
-                            <span style=" margin-left: 25px; color: gray"> Attached Files: </span> <a href="#"> file.pdf </a>
-                            
-                            <br>
+                            <span style="margin-left: 50px; color: gray"> Attached Files: </span> <a href="#"> file.pdf </a>
 
-                            <p style="margin-top: 50px; margin-left: 25px; color: gray">Click on the "Choose File" button to upload a file:</p>
+                            <p style="margin-top: 50px; margin-left: 50px; color: gray">Click on the "Choose File" button to upload a file:</p>
 
                             <form action="student_previewactivity.php" method="post" enctype="multipart/form-data">
-                            <input type="file" id="actfile" name="actfile" style=" margin-left: 25px;">
+                            <input type="file" id="actfile" name="actfile" style=" margin-left: 50px;">
                             <div class="align-center"> <input type="submit" name="submit" value="Submit File"> </div>
                             </form>
 

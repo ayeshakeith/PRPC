@@ -167,7 +167,7 @@
                     </div>
 
                     <div class="banner-area">
-                        <h1> <?php echo $_POST["coursename"]; ?> </h1>
+                        <h1> <?php $_SESSION["coursecode"] = $_POST["coursename"]; echo $_SESSION["coursecode"]; ?> </h1>
                     </div>
                     
                     <div class="content-area">
@@ -179,32 +179,32 @@
                         include('activities_authentication.php');
                         
                         ?>
-                            
-                        <a href="course_viewactivity.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <form action="course_viewactivity.php" method="POST">    
+                        <button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
                             <div class="d-flex w-100 justify-content-between">
-                            <u><h4 class="mb-1"><?php echo $row["deliverable_title"]; ?></h4></u>
+                            <u><h4 class="mb-1"><input name="activitytitle" value="<?php echo $row["deliverable_title"]; ?>" style="border:0px; font-size:20px; width:100%; line-height: 35px;" readonly></h4></u>
                             <small> Deadline: <?php echo $row["deliverable_duedate"]; ?></small>
                             </div>
-                            <br>
-                            <p class="mb-1"><?php echo $row["deliverable_description"]; ?></p>
-                        </a>
-                        
+                            <hr style="width: 100%;">
+                            <p class="mb-1"><input name="activitydescription" value="<?php echo $row["deliverable_description"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" readonly></p>
+                        </button>
+                        </form>
                         <?php ?>
 
                         <?php 
                         include('activities_authentication.php');
                         while($row = mysqli_fetch_assoc($result)) {
                         ?>
-
-                        <a href="course_viewactivity.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <form action="course_viewactivity.php" method="POST">
+                        <button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
                             <div class="d-flex w-100 justify-content-between">
-                            <u><h4 class="mb-1"><?php echo $row["deliverable_title"]; ?></h4></u>
+                            <u><h4 class="mb-1"><input name="activitytitle" value="<?php echo $row["deliverable_title"]; ?>" style="border:0px; font-size:20px; width:100%; line-height: 32px;" readonly></h4></u>
                             <small> Deadline: <?php echo $row["deliverable_duedate"]; ?></small>
                             </div>
-                            <br><br>
-                            <p class="mb-1"><?php echo $row["deliverable_description"]; ?></p>
-                        </a>
-                        
+                            <hr style="width: 100%;">
+                            <p class="mb-1"><input name="activitydescription" value="<?php echo $row["deliverable_description"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" readonly></p>
+                        </button>
+                        </form>
                         <?php } ?>
 
                         </div>
