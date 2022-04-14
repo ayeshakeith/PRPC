@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2022 at 09:36 AM
+-- Generation Time: Apr 14, 2022 at 01:21 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -24,12 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `announcement`
+--
+
+CREATE TABLE `announcement` (
+  `course_name` varchar(100) NOT NULL,
+  `course_section` varchar(100) NOT NULL,
+  `announcement_title` varchar(200) NOT NULL,
+  `announcement_content` varchar(500) NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `announcement`
+--
+
+INSERT INTO `announcement` (`course_name`, `course_section`, `announcement_title`, `announcement_content`, `date`) VALUES
+('CS126L', 'BM1', 'Weekly Assessment', 'There will be an assessment this week about the topics we have covered this week. Review all terms.', '2022-04-14 13:20:08');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `course`
 --
 
 CREATE TABLE `course` (
   `course_id` int(11) NOT NULL,
   `course_name` varchar(50) NOT NULL,
+  `course_title` varchar(200) NOT NULL,
+  `course_description` varchar(200) NOT NULL,
   `course_instructor` varchar(50) NOT NULL,
   `course_section` varchar(50) NOT NULL,
   `course_time` varchar(50) NOT NULL,
@@ -40,19 +63,19 @@ CREATE TABLE `course` (
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`course_id`, `course_name`, `course_instructor`, `course_section`, `course_time`, `course_schedule`) VALUES
-(1, 'CS126L', 'Kento Nanami', 'BM1', '7:30 AM - 9:00 AM', 'Monday'),
-(3, 'IT145L', 'Satoru Gojo', 'BM1', '12:00 PM - 1:30 PM', 'Tuesday'),
-(4, 'GED145', 'Iori Utahime', 'BM1', '8:30 AM - 10:00 AM', 'Wednesday'),
-(5, 'GED120', 'Toji Fushiguro', 'BM1', '7:30 PM - 9:00 PM', 'Thursday'),
-(6, 'CS145', 'Satoru Gojo', 'BM1', '4:30 PM - 6:00 PM', 'Friday'),
-(7, 'IT180L', 'Kento Nanami', 'BM1', '3:30 PM - 5:00 PM', 'Saturday'),
-(8, 'IT180L', 'Iori Utahime', 'BM2', '3:30 PM - 5:00 PM', 'Monday'),
-(9, 'CS145', 'Toji Fushiguro', 'BM2', '4:30 PM - 6:00 PM', 'Tuesday'),
-(10, 'GED120', 'Iori Utahime', 'BM2', '7:30 PM - 9:00 PM', 'Wednesday'),
-(11, 'GED145', 'Kento Nanami', 'BM2', '8:30 AM - 10:00 AM', 'Thursday'),
-(12, 'IT145L', 'Satoru Gojo', 'BM2', '12:00 PM - 1:30 PM', 'Friday'),
-(13, 'CS126L', 'Kento Nanami', 'BM2', '7:30 AM - 9:00 AM', 'Saturday');
+INSERT INTO `course` (`course_id`, `course_name`, `course_title`, `course_description`, `course_instructor`, `course_section`, `course_time`, `course_schedule`) VALUES
+(1, 'CS126L', 'Computer Programming', 'This course focuses on the logic formulation in solving problem using flowcharting and pseudocodes.', 'Kento Nanami', 'BM1', '7:30 AM - 9:00 AM', 'Monday'),
+(3, 'IT145L', 'Information Technology', 'This course provides the basic concepts and applications within the field of Information and Emerging Technologies.', 'Satoru Gojo', 'BM1', '12:00 PM - 1:30 PM', 'Tuesday'),
+(4, 'GED145', 'History and Culture', 'This course dives in deep into Philippines history and associated culture from the pre-colonial period to the modern era.', 'Iori Utahime', 'BM1', '8:30 AM - 10:00 AM', 'Wednesday'),
+(5, 'GED120', 'General Psychology', 'The course deals with the nature of identity, as well as the factors and forces that affects the development of our personal identity.', 'Toji Fushiguro', 'BM1', '7:30 PM - 9:00 PM', 'Thursday'),
+(6, 'CS145', 'Intro to Computer Science', 'This course provides an overview of the Computing Industry and Computing profession, with Research and practical applications.', 'Satoru Gojo', 'BM1', '4:30 PM - 6:00 PM', 'Friday'),
+(7, 'IT180L', 'Network Technologies', 'This course focuses on the practical application of networking technologies in various laboratory activities.', 'Kento Nanami', 'BM1', '3:30 PM - 5:00 PM', 'Saturday'),
+(8, 'IT180L', 'Network Technologies', 'This course focuses on the practical application of networking technologies in various laboratory activities.', 'Iori Utahime', 'BM2', '3:30 PM - 5:00 PM', 'Monday'),
+(9, 'CS145', 'Intro to Computer Science', 'This course provides an overview of the Computing Industry and Computing profession, with Research and practical applications.', 'Toji Fushiguro', 'BM2', '4:30 PM - 6:00 PM', 'Tuesday'),
+(10, 'GED120', 'General Psychology', 'The course deals with the nature of identity, as well as the factors and forces that affects the development of our personal identity.', 'Iori Utahime', 'BM2', '7:30 PM - 9:00 PM', 'Wednesday'),
+(11, 'GED145', 'History and Culture', 'This course dives in deep into Philippines history and associated culture from the pre-colonial period to the modern era.', 'Kento Nanami', 'BM2', '8:30 AM - 10:00 AM', 'Thursday'),
+(12, 'IT145L', 'Information Technology', 'This course provides the basic concepts and applications within the field of Information and Emerging Technologies.', 'Satoru Gojo', 'BM2', '12:00 PM - 1:30 PM', 'Friday'),
+(13, 'CS126L', 'Computer Programming', 'This course focuses on the logic formulation in solving problem using flowcharting and pseudocodes.', 'Kento Nanami', 'BM2', '7:30 AM - 9:00 AM', 'Saturday');
 
 -- --------------------------------------------------------
 
