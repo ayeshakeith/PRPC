@@ -1,8 +1,8 @@
 # PRPC
 CS126L Project Repository and Program Checker
 
-Andes, Gabriela M.
-Ellazar, Razmin Bernadette
-Jaurigue, Curt Ericson M.
-Pallarca, Ryan Harvi
-Santos, Ayesha Keith C.
+Gabriela M. Andes, 
+Razmin Bernadette Ellazar,
+Curt Ericson M. Jaurigue,
+Ryan Harvi Pallarca,
+Ayesha Keith C. Santos
