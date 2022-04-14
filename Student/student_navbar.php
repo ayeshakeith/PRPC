@@ -21,7 +21,7 @@
         <ul class="nav navbar-nav">
         <li><a href="student_dashboard.php" style="color: #003d60;">Home</a></li>
         <li><a href="student_mycourses.php" style="color: #003d60;">Courses</a></li>
-        <li><a href="#" style="color: #003d60;">Learning Tools</a></li>
+        <li><a href="student_learningtools.php" style="color: #003d60;">Learning Tools</a></li>
         </ul>
         <div class="topnav-centered">
             <a href="#"><span class="glyphicon glyphicon-education"></span> OnlineSesh</a>
