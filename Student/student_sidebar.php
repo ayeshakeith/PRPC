@@ -1,3 +1,14 @@
+<style>
+    a{
+        color: white;
+    }
+
+    a:hover{
+        color: #130d4c;
+    }
+
+</style>
+
 <div class="sidebar">
     <div class="wrapper">
 
@@ -9,19 +20,21 @@
         <div class="links">
                 <div class="link">
                     <img src="https://img.icons8.com/material-rounded/96/ffffff/bell--v1.png" alt="logo">
-                    <span>Announcements</span>
+                    <a href="student_announcement.php"> <span>Announcements</span> </a>
+                   
                 </div>
                 <div class="link">
                     <img src="https://img.icons8.com/ios-glyphs/90/ffffff/document--v1.png" alt="logo">
-                    <span>Activities</span>
+                    <a href="student_viewactivity.php"> <span>Activities</span> </a>
                 </div>
                 <div class="link">
                     <img src="https://img.icons8.com/ios-filled/100/ffffff/checkmark--v1.png" alt="logo">
-                    <span>Submitted Works</span>
+                    <a href="student_dashboard.php"> <span>Submitted Works</span> </a>
+                    
                 </div>
                 <div class="link">
                     <img src="https://img.icons8.com/fluency-systems-filled/96/ffffff/x.png" alt="logo" >
-                    <span>Pending Works</span>
+                    <a href="student_dashboard.php"> <span>Pending Works</span> </a>
                 </div>
         </div>
 
