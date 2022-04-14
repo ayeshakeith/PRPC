@@ -138,7 +138,7 @@
             }
 
             .align-center{
-                margin-top: 10%;
+                margin-top: 3%;
                 text-align: center;
             }
 
@@ -172,6 +172,9 @@
                     
                     <div class="content-area">
                         <div class="content-box">
+                        
+                        <h2 class="align-center" style="color: #db9a53"> Activities </h2>
+                        <hr style="border-top: 3px solid #fccb96; width: 5%">
                             
                         <div class="list-group">
 
