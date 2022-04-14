@@ -13,116 +13,22 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<style>
-    body
-    {
-        background-color:beige;
-    }
-    .LTdescription{
-        margin: auto auto;
-        background-color:white;
-        width:50%;
-        height:230px;
-        text-align:center;
-    }
-    h1{
-        color:#243476;
-        padding:50px;
-        font-size:40px;
-        margin-bottom:-25px;
-    }
-    h4{
-       font-size:12px;
-       margin-top:45px;
-       color:#243476;
-    }
-    .LTcontent{
-        margin: auto auto;
-        background-color:white;
-        width:50%;
-    }
-    .LTcontent input[type=text] {
-        margin:20px 16px 20px 20px;
-        border: none;
-        font-size: 17px;
-        width:58%;
-        height:30px;
-        color:#243476;
-    }
-    .LTcontent button[type=submit]{
-        border:none;
-        background-color:white;
-        color:blue;
-        cursor:pointer;
-        font-size:15px;
-    }
-    .LTNewFolder{
-        border-style:solid;
-        border-color:#243476;
-        color:#243476;
-        width:15%;
-        height:40px;
-        margin-left:10px;
-        cursor:pointer;
-    }
-    .LTFile{
-        border-radius:0px;
-        border-color:#243476;
-        background-color:#243476;
-        width:15%;
-        height:40px;
-        color:white;
-        cursor:pointer;
-    }
-    .LTTable {
-        border-collapse:separate;
-        border-spacing: 0 50px;
-        margin:auto auto;
-        margin-top:-35px;
-        text-align: left;
-        width:90%;
-        font-size:14px;
-    }
-    .LTTable .fa-star
-    {        
-        float:left;
-        font-size:10px;
-        margin-right:5px;
-    }
-    .fa-folder{
-        float:left;
-        font-size:30px;
-
-    }
-    .fa-file-pdf{
-        float:left;
-        font-size:35px;
-    }
-    .footer{
-        position:fixed;
-        bottom:0;
-        left:0;
-        color:blue;
-        background-color:#243476;
-        width:100%;
-        height: 50px;
-    }
-    .gg-profile{
-        float:left;
-        margin-right:10px;
-    }
-	</style>
     </head>
 
-<body>
+<body style="background-color:#fff9f5; font-family: Poppins">
 <?php include('student_navbar.php'); ?><br><br><br>
-<div class="LTdescription"><!-- Learning Tools Description start -->
-    <h1> Learning Tools </h1>
-    <hr style="width:10%; height:1px; background-color:blue">
-    <h4> This area contains video lectures uploaded by the teachers in different subjects. </h4>
-</div> <!-- Learning Tools Description end --><br><br>
 
+<?php include('student_learningtools_style.php'); ?>
 
+<!-- Learning Tools Description start -->
+<div class="container" style="text-align: center; background-color:white; margin-top:50px; position: relative; z-index: 0px; width: 60%; padding:10rem;">
+    <h1 class='heading'>Learning Tools</h1>
+    <br><br><br>
+    <p class="mb-0">This area contains video lectures uploaded by the teachers in different subjects.</p>
+</div>
+<!-- Learning Tools Description end -->
+
+<br><br>
 
 <div class="LTcontent"><!-- Learning Tools Content start -->
     <input type="text" placeholder="Files">
@@ -179,12 +85,7 @@
 <br><br>
 </div><!-- Learning Tools Content end -->
 
-<div class="footer">
-    <p></p>
-</div>
-
-
-
+<footer class="footer-container"> </footer>
 
 </body>
 </html>
