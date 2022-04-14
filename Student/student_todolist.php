@@ -8,16 +8,19 @@
 <br><br>
 <div class="container" style="text-align: center; background-color:#fff9f5; width: 79%; font-size: 20px;">
             
-                <ul class="list-group" style="border: 1px solid black;">
-                    <button type="button" class="list-group-item list-group-item-action">
+                <ul class="list-group">
+                <form action="student_viewactivity.php" method="POST">
+                    <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
                               if($row["course_schedule"] == "Monday")
                               {
                                   $course1 = $row["course_name"];
+                                  $_SESSION["checkcourse1"] = $course1;
                                   echo $course1 . " - " . $row["course_title"] . " with " . $row["course_instructor"];
                               }
                         ?>
+                        <input style="font-size: 1px;" name="coursename" value="<?php echo $_SESSION["checkcourse1"]; ?>" hidden>
                         <span class="badge badge-primary badge-pill">
                             <?php
                                 include('todolist_authentication.php');
@@ -31,7 +34,9 @@
                             ?>
                         </span>
                     </button>
-                    <button type="button" class="list-group-item list-group-item-action">
+                    </form>
+                    <form action="student_viewactivity.php" method="POST">
+                    <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
                           if (mysqli_num_rows($result) > 0) {
@@ -39,11 +44,13 @@
                               if($row["course_schedule"] == "Tuesday")
                               {
                                     $course2 = $row["course_name"];
+                                    $_SESSION["checkcourse2"] = $course2;
                                     echo $course2 . " - " . $row["course_title"] . " with " . $row["course_instructor"];
                               }
                             }
                           } 
                         ?>
+                        <input style="font-size: 1px;" name="coursename" value="<?php echo $_SESSION["checkcourse2"]; ?>" hidden>
                         <span class="badge badge-primary badge-pill">
                             <?php
                                 include('todolist_authentication.php');
@@ -57,7 +64,9 @@
                             ?>
                         </span>
                     </button>
-                    <button type="button" class="list-group-item list-group-item-action">
+                    </form>
+                    <form action="student_viewactivity.php" method="POST">
+                    <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
                           if (mysqli_num_rows($result) > 0) {
@@ -65,11 +74,13 @@
                               if($row["course_schedule"] == "Wednesday")
                               {
                                     $course3 = $row["course_name"];
+                                    $_SESSION["checkcourse3"] = $course3;
                                     echo $course3 . " - " . $row["course_title"] . " with " . $row["course_instructor"];
                               }
                             }
                           } 
                         ?>
+                        <input style="font-size: 1px;" name="coursename" value="<?php echo $_SESSION["checkcourse3"]; ?>" hidden>
                         <span class="badge badge-primary badge-pill">
                             <?php
                                 include('todolist_authentication.php');
@@ -83,7 +94,9 @@
                             ?>
                         </span>
                     </button>
-                    <button type="button" class="list-group-item list-group-item-action">
+                    </form>
+                    <form action="student_viewactivity.php" method="POST">
+                    <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
                           if (mysqli_num_rows($result) > 0) {
@@ -91,11 +104,13 @@
                               if($row["course_schedule"] == "Thursday")
                               {
                                     $course4 = $row["course_name"];
+                                    $_SESSION["checkcourse4"] = $course4;
                                     echo $course4 . " - " . $row["course_title"] . " with " . $row["course_instructor"];
                               }
                             }
                           } 
                         ?>
+                        <input style="font-size: 1px;" name="coursename" value="<?php echo $_SESSION["checkcourse4"]; ?>" hidden>
                         <span class="badge badge-primary badge-pill">
                             <?php
                                 include('todolist_authentication.php');
@@ -109,7 +124,9 @@
                             ?>
                         </span>
                     </button>
-                    <button type="button" class="list-group-item list-group-item-action">
+                    </form>
+                    <form action="student_viewactivity.php" method="POST">
+                    <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
                           if (mysqli_num_rows($result) > 0) {
@@ -117,11 +134,13 @@
                               if($row["course_schedule"] == "Friday")
                               {
                                     $course5 = $row["course_name"];
+                                    $_SESSION["checkcourse5"] = $course5;
                                     echo $course5 . " - " . $row["course_title"] . " with " . $row["course_instructor"];
                               }
                             }
                           } 
                         ?>
+                        <input style="font-size: 1px;" name="coursename" value="<?php echo $_SESSION["checkcourse5"]; ?>" hidden>
                         <span class="badge badge-primary badge-pill">
                             <?php
                                 include('todolist_authentication.php');
@@ -135,7 +154,9 @@
                             ?>
                         </span>
                     </button>
-                    <button type="button" class="list-group-item list-group-item-action">
+                    </form>
+                    <form action="student_viewactivity.php" method="POST">
+                    <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
                           if (mysqli_num_rows($result) > 0) {
@@ -143,11 +164,13 @@
                               if($row["course_schedule"] == "Saturday")
                               {
                                     $course6 = $row["course_name"];
+                                    $_SESSION["checkcourse6"] = $course6;
                                     echo $course6 . " - " . $row["course_title"] . " with " . $row["course_instructor"];
                               }
                             }
                           } 
                         ?>
+                        <input style="font-size: 1px;" name="coursename" value="<?php echo $_SESSION["checkcourse6"]; ?>" hidden>
                         <span class="badge badge-primary badge-pill">
                             <?php
                                 include('todolist_authentication.php');
@@ -161,5 +184,6 @@
                             ?>
                         </span>
                     </button>
+                    </form>
                 </ul>
 </div>

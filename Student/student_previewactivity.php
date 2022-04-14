@@ -155,7 +155,7 @@
         </style>
     </head>
 
-    <body style="background-color:#f1ece9; font-family: Poppins; margin: 0; pading:0;">
+    <body style="background-color:#f1ece9; font-family: Poppins; margin: 0; padding:0;">
             
     
             <?php include('student_navbar.php'); ?>

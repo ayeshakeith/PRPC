@@ -14,7 +14,7 @@
 
         <div class="logo">
                 <img src="https://img.icons8.com/ios-glyphs/60/ffffff/user--v1.png" alt="logo" width="40px">
-                <span> Hello, User!</span>
+                <span> <?php echo $_SESSION['name'] ?></span>
         </div>
         
         <div class="links">
