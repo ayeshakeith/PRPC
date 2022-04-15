@@ -176,7 +176,7 @@
                         <h2 class="align-center" style="color: #db9a53"> Activities </h2>
                         <hr style="border-top: 3px solid #fccb96; width: 5%">
                             
-                        <div class="list-group">
+                        <div class="list-group" style=" max-height: 490px; margin-bottom: 10px; overflow:scroll; -webkit-overflow-scrolling: touch;">
 
                         <?php 
                         include('activities_authentication.php');
