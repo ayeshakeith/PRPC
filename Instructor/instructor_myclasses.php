@@ -77,7 +77,7 @@
     </head>
 
     <body style="background-color:#f1ece9; font-family: Poppins">
-            <?php include('student_navbar.php'); ?>
+            <?php include('instructor_navbar.php'); ?>
 
             <div class="container-image" id="home">
                 <img src="https://gosaintjoseph.org/wp-content/uploads/2016/03/stj-header-books.jpg" alt="books" height="500px" width="100%">
@@ -86,12 +86,12 @@
             <br><br><br><br>
 
             <div class="container-mycourses">
-                <h1>My Courses</h1>
+                <h1>My Classes</h1>
             </div>
 
             <br>
 
-            <?php include('student_courselist.php'); ?>
+            <?php include('instructor_classlist.php'); ?>
 
         <footer class="footer-container"> </footer>
     </body>

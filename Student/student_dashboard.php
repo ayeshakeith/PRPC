@@ -1,5 +1,6 @@
 <?php
     session_start();
+    unset($_SESSION['coursecode']);
 ?>
 <html>
     <head>
@@ -16,11 +17,11 @@
         <?php include('student_dashboard_style.php'); ?>
     </head>
 
-    <body style="background-color:white; font-family: Poppins">
+    <body style="background-color:#fff9f5; font-family: Poppins">
             <?php include('student_navbar.php'); ?>
 
             <div class="container1">
-              <img src="../Student/img/studentdashboardheader.jpg" style="width:100%;">
+              <img src="../Student/img/student_dashboardheader.jpg" style="width:100%;">
               <div class="centered">
                 <h2> Online Classes From Everywhere </h2> <br><br> 
                 <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-play"></span> Play Video </button> </div>
@@ -34,7 +35,7 @@
                 <div class="grid-item"><iframe style="width: 100%;" src="https://www.youtube.com/embed/lDeFSOUHdH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </div>
 
-            <div class="container" style="text-align: center; background-color:#fff9f5; margin-top:-20px; position: relative; z-index: 0px; width: 60%; padding:10rem;">
+            <div class="container" style="text-align: center; background-color:white; margin-top:-20px; position: relative; z-index: 0px; width: 60%; padding:10rem;">
               <h1 class='heading'>Weekly Schedule</h1>
               <br><br><br>
               <p class="mb-0">"You don't get what you wish for. You get what you work for."</p>

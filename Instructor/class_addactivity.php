@@ -16,50 +16,46 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        <?php include('instructor_activities_style.php'); ?>
+        <?php include('class_announcement_style.php'); ?>
     </head>
 
     <body style="background-color:#f1ece9; font-family: Poppins; overflow:hidden;">
             <?php include('instructor_navbar.php'); ?>
-			<?php include('instructor_side-navbar.php'); ?>
+			<?php include('class_sidebar.php'); ?>
 			
 		
 			<div class = "container-fluid header-container">
-				<p style="font-size:32px; color:white;">SUBJECT NAME | SECTION</p>
+				<p style="font-size:32px; color:white;"><?php echo $_SESSION["classcode"] . " - " . $_SESSION["classsec"] ?></p>
 			</div>
 		
 	<div class="container-fluid">		
 			<div class = "container-fluid body-container">
-				<p style="font-size:35px; color:#DB9A53; text-align:center;">Edit Activity</p>
+				<p style="font-size:35px; color:#DB9A53; text-align:center;">Upload an Activity</p>
 				<hr style="border-top: 3px solid #fccb96; width: 15%">
 
 				<br>
-				<form class="form-horizontal" id="activity" action="#" method="post"> <!--FORM-->
-				  <div class="form-group">
-					
-						<div class="col-sm-5" style="margin-left:23vw; text-align:center;">
-						
-						<input type="text" style="font-size:20px;" class="form-control" id="inputPassword" placeholder="Activity Number/Name">
-						
-						</div>
-					
-				  </div>
+				<form class="form-horizontal" id="activity" action="addactivity_authentication.php" method="post">  <!--FORM-->
+
 				  <br>
-				  <p style="font-size:25px; color:#282626; text-align:justify;">INSTRUCTION/S:</p><br>
+				  
 				  
 					<div class="container-fluid">
-						<textarea class="form-control" rows="9"></textarea>
+					<input placeholder="Activity Name" rows="9" id="actNo" name="activitytitle" style="font-size: 16px; color:black; padding:10px; width:30vw;"type="text" tabindex="1" 
+								 value="" required autofocus>
+					<input placeholder="Due Date" rows="9" id="activitydeadline" name="activitydeadline" style="font-size: 16px; color:black; padding:10px; width:30vw;"type="text" tabindex="1" 
+							value="" required autofocus>
+								 <br><br>
+						<textarea class="form-control" rows="5" name="instruction" placeholder="Activity Instructions" required autofocus></textarea>
 						<br>
-					
+						
 					</div>
-						<center>
-						<button type="button" class="btn btn-default" style="width:10vw; background-color:white; color: #130d4c;"><a href="instructor_attach.php" style="color:#130d4c;"> <i class="fa fa-upload" style="font-size:23px; color:#130d4c;"></i> &nbsp;Attach a File</a></button>
-						</center>
-						<br>
+
+						
+
+						<br><br><br>
 					<center>
 						<button type="submit" class="btn btn-default" style="width:8vw; background-color:#DB9A53; color: white;">Post</button>
 							&nbsp;&nbsp;&nbsp;
-						<button type="button" class="btn btn-default" style="width:8vw; background-color:#130d4c; color: white;">Cancel</button>
 					</center>
 				</form>
 			</div>

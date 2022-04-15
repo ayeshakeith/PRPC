@@ -16,16 +16,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        <?php include('instructor_activities_style.php'); ?>
+        <?php include('class_announcement_style.php'); ?>
     </head>
 
     <body style="background-color:#f1ece9; font-family: Poppins; overflow:hidden;">
             <?php include('instructor_navbar.php'); ?>
-			<?php include('instructor_side-navbar.php'); ?>
+			<?php include('class_sidebar.php'); ?>
 			
 		
 			<div class = "container-fluid header-container">
-				<p style="font-size:32px; color:white;">SUBJECT NAME | SECTION</p>
+				<p style="font-size:32px; color:white;"><?php echo $_SESSION["classcode"] . " - " . $_SESSION["classsec"] ?></p>
 			</div>
 		
 	<div class="container-fluid">		
