@@ -30,7 +30,7 @@
 			
 			
 			<div class = "container-fluid body-container" style="display: inline-block;">
-				<p style="font-size:35px; color:#DB9A53; text-align:center;">Acitivty</p>
+				<p style="font-size:35px; color:#DB9A53; text-align:center;">Activity</p>
 				<hr style="border-top: 3px solid #fccb96; width: 15%">
 				<br><br><br>
 				<!-- announcements content -->
