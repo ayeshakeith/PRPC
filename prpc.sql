@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2022 at 07:53 AM
+-- Generation Time: Apr 15, 2022 at 08:52 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -53,7 +53,8 @@ INSERT INTO `announcement` (`announcement_id`, `course_name`, `course_instructor
 (10, 'CS145', 'Satoru Gojo', 'BM1', 'Weekly Assessment', 'We will have a weekly assessment this Friday via recitation. Just read about recent articles about Computer Science, and some prominent Filipino figures in the field. This will be graded, so make sure to study.', '2022-04-15 07:39:39'),
 (11, 'CS145', 'Toji Fushiguro', 'BM2', 'Weekly Assessment (Paired)', 'We will have a weekly assessment this Tuesday via paired recitation. Study about the technologies used in Computer Science, as well as the developers and creators of such technologies. Reminder: weekly assessments are graded.', '2022-04-15 07:39:39'),
 (12, 'IT180L', 'Iori Utahime', 'BM2', 'Welcome to Network Technologies!', 'Class, for this week\'s meeting, we will only have a course orientation wherein I will also discuss the course syllabus. Still, make sure to attend. I was able to limit the department\'s maximum number of absences to 1, so every meeting counts. See you on Monday.', '2022-04-15 07:46:18'),
-(13, 'IT180L', 'Kento Nanami', 'BM1', 'Asynchronous Session', 'We will have an asynchronous session for this week. I\'m still computing the first year\'s annual assessment, so I will be very busy this week. Regardless, I have already uploaded your weekly activity, Assignment 1.1. Make sure to submit it before deadline.', '2022-04-15 07:48:43');
+(13, 'IT180L', 'Kento Nanami', 'BM1', 'Asynchronous Session', 'We will have an asynchronous session for this week. I\'m still computing the first year\'s annual assessment, so I will be very busy this week. Regardless, I have already uploaded your weekly activity, Assignment 1.1. Make sure to submit it before deadline.', '2022-04-15 07:48:43'),
+(14, 'CS126L', 'Kento Nanami', 'BM1', 'Programming Activity 1 (Link Details)', 'Programming Activity 1 has been uploaded. Make sure to read the brief lesson about what the activity is all about, and ensure that you have followed all instructions before submitting. Else, you will get a zero mark. Note: this activity comprises 10% of your final grade.', '2022-04-15 08:43:31');
 
 -- --------------------------------------------------------
 
@@ -206,7 +207,7 @@ ALTER TABLE `user_login`
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `announcement_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `announcement_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `course`
