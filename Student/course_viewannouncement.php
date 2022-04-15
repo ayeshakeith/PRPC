@@ -3,7 +3,7 @@
 ?>
 <html>
     <head>
-        <title>My Announcements</title>
+        <title>My Activities</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -123,13 +123,13 @@
                 margin-left:260px;
                 margin-right: 15px;
                 height: 50vh;  
-                text-align: center;
-                color: white;
+                color: black;
                 vertical-align: top;
             }
             
             .content-box{
                 background-color: white;
+                position: relative;
                 margin: 0 auto;
                 margin-top: 1%;
                 width: 100%;
@@ -138,17 +138,26 @@
                 height: 83vh;
             }
 
-            .announcement-card{
-                margin-top: 50px;
-                border: 5px solid #fdd5ab;
-                background-color: #eeedfd;
-                margin-left: 65px;
-                text-align: left;
-                color: black;
+            .upload-form{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
             }
 
+            .align-center{
+                margin-top: 10%;
+                text-align: center;
+            }
 
-
+            input[type=submit] {
+                width: 10%;
+                background-color: white;
+                color: black;
+                border: 2px solid #130d4c;
+                padding: 14px 20px;
+                border-radius: 30px;
+                cursor: pointer;
+            }
 
         </style>
     </head>
@@ -157,20 +166,6 @@
             
     
             <?php include('student_navbar.php'); ?>
-            
-            <!-- Alternate Banner, Hello User is not connected in sidebar
-                <div class="user-bar"> 
-                <div class="row">
-                    <div class="col-md-2" style="padding: 10px 50px; color: white; font-size: 18px;">
-                        <img src="https://img.icons8.com/ios-glyphs/60/ffffff/user--v1.png" alt="logo" width="40px">
-                        <span> Hello, User!</span>
-                    </div>
-                    <div class="col-md-10" style="text-align: center; color: white;">
-                        <h3> SUBJECT NAME </h3>
-                    </div>
-                </div>
-                </div> 
-            -->
 
             <div class="content">
                     <div class="student-sidebar">
@@ -183,52 +178,20 @@
                     </div>
                     
                     <div class="content-area">
-                        <div class="content-box">
-
-                        <h2 class="align-center" style="color: #db9a53"> Announcements </h2>
-                        <hr style="border-top: 3px solid #fccb96; width: 5%">
+                        <div class="content-box" style="padding:10px;">
                             
-                        <div class="list-group">
-
-                        <?php 
-                        include('announcement_authentication.php');
-                        
-                        ?>
-                        <form action="course_viewannouncement.php" method="POST">    
-                        <button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                            <u><h4 class="mb-1"><input name="announcementtitle" value="<?php echo $row["announcement_title"]; ?>" style="border:0px; font-size:20px; width:100%; line-height: 35px;" readonly></h4></u>
-                            <p class="mb-1"><input name="announcementdescription" value="<?php echo $row["announcement_content"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" readonly></p>
-                            </div>
-                            <hr style="width: 100%;">
-                            <small style="float: right"> Posted On: <?php echo $row["date"]; ?></small>
                             <br>
-                            <small style="float: right"> Posted By: <?php echo $row["course_instructor"]; ?></small>
-                            
-                        </button>
-                        </form>
-                        <?php ?>
+                            <h2 style="text-align: center"> <?php echo $_POST["announcementtitle"]; ?> </h2>
 
-                        <?php 
-                        include('announcement_authentication.php');
-                        while($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                        <form action="course_viewannouncement.php" method="POST">
-                        <button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                            <u><h4 class="mb-1"><input name="announcementtitle" value="<?php echo $row["announcement_title"]; ?>" style="border:0px; font-size:20px; width:100%; line-height: 32px;" readonly></h4></u>
-                            <p class="mb-1"><input name="announcementdescription" value="<?php echo $row["announcement_content"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" readonly></p>
-                            </div>
-                            <hr style="width: 100%;">
-                            <small style="float: right"> Posted On: <?php echo $row["date"]; ?></small>
+                            <hr style="width: 80%;">
+
+                            <br><br>
+
+                            <p style="text-align:justify; margin-right:50px; margin-left:50px;">
+                            <?php echo $_POST["announcementdescription"]; ?>
+                            </p>
+
                             <br>
-                            <small style="float: right"> Posted By: <?php echo $row["course_instructor"]; ?></small>
-                            
-                        </button>
-                        </form>
-                        <?php } ?>
-
-                        </div>
 
                         </div>
                     </div>
