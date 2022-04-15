@@ -58,7 +58,7 @@
         <ul class="nav navbar-nav">
         <li><a href="instructor_dashboard.php" style="color: #003d60;">Home</a></li>
         <li><a href="instructor_myclasses.php" style="color: #003d60;">Classes</a></li>
-        <li><a href="#" style="color: #003d60;">Learning Tools</a></li>
+        <li><a href="instructor_learningtools.php" style="color: #003d60;">Learning Tools</a></li>
         </ul>
         <div class="topnav-centered">
             <a href="#"><span class="glyphicon glyphicon-education"></span> OnlineSesh</a>
@@ -83,6 +83,7 @@
             $result = mysqli_query($con, $query);  
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
             $count = mysqli_num_rows($result);
+            
 
             echo '<img style="width: 5%; height:5%; float:right; padding-top:10px; padding-bottom:10px; border-radius: 50%;" src = "data:image/jpeg;base64,'.base64_encode($row['icon']).'"/>'; 
             ?>
