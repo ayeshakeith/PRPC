@@ -9,7 +9,7 @@
 <div class="container" style="text-align: center; background-color:#fff9f5; width: 79%; font-size: 20px;">
             
                 <ul class="list-group">
-                <form action="course_activities.php" method="POST">
+                <form action="course_buffer.php" method="POST">
                     <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
@@ -35,7 +35,7 @@
                         </span>
                     </button>
                     </form>
-                    <form action="course_activities.php" method="POST">
+                    <form action="course_buffer.php" method="POST">
                     <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
@@ -65,7 +65,7 @@
                         </span>
                     </button>
                     </form>
-                    <form action="course_activities.php" method="POST">
+                    <form action="course_buffer.php" method="POST">
                     <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
@@ -95,7 +95,7 @@
                         </span>
                     </button>
                     </form>
-                    <form action="course_activities.php" method="POST">
+                    <form action="course_buffer.php" method="POST">
                     <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
@@ -125,7 +125,7 @@
                         </span>
                     </button>
                     </form>
-                    <form action="course_activities.php" method="POST">
+                    <form action="course_buffer.php" method="POST">
                     <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
@@ -155,7 +155,7 @@
                         </span>
                     </button>
                     </form>
-                    <form action="course_activities.php" method="POST">
+                    <form action="course_buffer.php" method="POST">
                     <button type="submit" class="list-group-item list-group-item-action">
                         <?php 
                           include('schedule_authentication.php'); 
@@ -185,5 +185,8 @@
                         </span>
                     </button>
                     </form>
+
+                    
+
                 </ul>
 </div>

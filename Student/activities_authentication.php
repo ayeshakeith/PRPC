@@ -3,7 +3,7 @@
 
     $section = $_SESSION['section'];
 
-    $id = $_POST["coursename"];
+    $id = $_SESSION['coursecode'];
       
     $query = "SELECT * from deliverable WHERE course_section = '$section' and course_name = '$id'";
 

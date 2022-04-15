@@ -167,7 +167,7 @@
                     </div>
 
                     <div class="banner-area">
-                        <h1> <?php $_SESSION["coursecode"] = $_POST["coursename"]; echo $_SESSION["coursecode"]; ?> </h1>
+                        <h1> <?php echo $_SESSION["coursecode"]; ?> </h1>
                     </div>
                     
                     <div class="content-area">
