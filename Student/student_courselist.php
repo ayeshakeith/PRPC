@@ -6,8 +6,9 @@
                         <div class="col-md-3" style="background-color: white; padding: 0px">
                             <img src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-image" alt="books">
                         </div>
-                        <div class="col-md-9" style="background-color: white; height:190px;">
-                        <a href="student_"> <h2 class="card-title mt-3" style="display: inline-block;">
+                        <form action="list_buffer.php" method="POST">
+                        <button type="submit" class="col-md-9" style="background-color: white; height:190px; text-align:left;">
+                        <h2 class="card-title mt-3" style="display: inline-block;">
                                 <?php
                                     include('schedule_authentication.php'); 
                                     if($row["course_schedule"] == "Monday")
@@ -24,9 +25,11 @@
                                     if($row["course_schedule"] == "Monday")
                                     {
                                         echo $row["course_name"] . ": " . $row["course_description"];
+                                        $cn1 = $row["course_name"];
                                     }
                                 ?>
                             </p>
+                            <input style="font-size: 1px;" name="coursename" value="<?php echo $cn1; ?>" hidden>
                             <p style="margin-top: -5px; margin-left:5px;"> Instructor:
                                 <?php
                                     include('schedule_authentication.php'); 
@@ -36,9 +39,9 @@
                                     }
                                 ?>
                             </p>
-                            <form action="course_authentication.php" method="POST">
+                            <br>
                             </form>
-                        </div>
+                            </button>
                     </div>
                 </div>
 
@@ -47,8 +50,9 @@
                         <div class="col-md-3" style="background-color: white; padding: 0px;">
                             <img src="https://images.pexels.com/photos/92866/pexels-photo-92866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-image" alt="books">
                         </div>
-                        <div class="col-md-9" style="background-color: white; height:190px;">
-                            <a href="#"> <h2 class="card-title mt-3">
+                        <form action="list_buffer.php" method="POST">
+                        <button type="submit" class="col-md-9" style="background-color: white; height:190px; text-align:left;">
+                        <h2 class="card-title mt-3" style="display: inline-block;">
                                 <?php 
                                 include('schedule_authentication.php'); 
                                 if (mysqli_num_rows($result) > 0) {
@@ -71,11 +75,13 @@
                                     if($row["course_schedule"] == "Tuesday")
                                     {
                                         echo $row["course_name"] . ": " . $row["course_description"];
+                                        $cn2 = $row["course_name"];
                                     }
                                     }
                                 } 
                                 ?>
                             </p>
+                            <input style="font-size: 1px;" name="coursename" value="<?php echo $cn2; ?>" hidden>
                             <p style="margin-top: -5px; margin-left:5px;"> Instructor:
                                 <?php 
                                 include('schedule_authentication.php'); 
@@ -90,7 +96,8 @@
                                 ?>
                             </p>
                             <br>
-                        </div>
+                            </form>
+                            </button>
                     </div>
                 </div>
 
@@ -99,8 +106,9 @@
                         <div class="col-md-3" style="background-color: white; padding: 0px;">
                             <img src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-image" alt="books">
                         </div>
-                        <div class="col-md-9" style="background-color: white; height:190px;">
-                            <a href="#"> <h2 class="card-title mt-3">
+                        <form action="list_buffer.php" method="POST">
+                        <button type="submit" class="col-md-9" style="background-color: white; height:190px; text-align:left;">
+                        <h2 class="card-title mt-3" style="display: inline-block;">
                                 <?php 
                                 include('schedule_authentication.php'); 
                                 if (mysqli_num_rows($result) > 0) {
@@ -123,11 +131,13 @@
                                     if($row["course_schedule"] == "Wednesday")
                                     {
                                         echo $row["course_name"] . ": " . $row["course_description"];
+                                        $cn3 = $row["course_name"];
                                     }
                                     }
                                 } 
                                 ?>
                             </p>
+                            <input style="font-size: 1px;" name="coursename" value="<?php echo $cn3; ?>" hidden>
                             <p style="margin-top: -5px; margin-left:5px;"> Instructor: 
                                 <?php 
                                 include('schedule_authentication.php'); 
@@ -142,7 +152,8 @@
                                 ?>
                             </p>
                             <br>
-                        </div>
+                            </form>
+                            </button>
                     </div>
                 </div>
 
@@ -151,8 +162,9 @@
                         <div class="col-md-3" style="background-color: white; padding: 0px;">
                             <img src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-image" alt="books">
                         </div>
-                        <div class="col-md-9" style="background-color: white; height:190px;">
-                            <a href="#"> <h2 class="card-title mt-3">
+                        <form action="list_buffer.php" method="POST">
+                        <button type="submit" class="col-md-9" style="background-color: white; height:190px; text-align:left;">
+                        <h2 class="card-title mt-3" style="display: inline-block;">
                                 <?php 
                                 include('schedule_authentication.php'); 
                                 if (mysqli_num_rows($result) > 0) {
@@ -175,11 +187,13 @@
                                     if($row["course_schedule"] == "Thursday")
                                     {
                                         echo $row["course_name"] . ": " . $row["course_description"];
+                                        $cn4 = $row["course_name"];
                                     }
                                     }
                                 } 
                                 ?>
                             </p>
+                            <input style="font-size: 1px;" name="coursename" value="<?php echo $cn4; ?>" hidden>
                             <p style="margin-top: -5px; margin-left:5px;"> Instructor: 
                                 <?php 
                                 include('schedule_authentication.php'); 
@@ -194,7 +208,8 @@
                                 ?>
                             </p>
                             <br>
-                        </div>
+                            </form>
+                            </button>
                     </div>
                 </div>
 
@@ -203,8 +218,9 @@
                         <div class="col-md-3" style="background-color: white; padding: 0px;">
                             <img src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-image" alt="books">
                         </div>
-                        <div class="col-md-9" style="background-color: white; height:190px;">
-                            <a href="#"> <h2 class="card-title mt-3">
+                        <form action="list_buffer.php" method="POST">
+                        <button type="submit" class="col-md-9" style="background-color: white; height:190px; text-align:left;">
+                        <h2 class="card-title mt-3" style="display: inline-block;">
                                 <?php 
                                 include('schedule_authentication.php'); 
                                 if (mysqli_num_rows($result) > 0) {
@@ -227,11 +243,13 @@
                                     if($row["course_schedule"] == "Friday")
                                     {
                                         echo $row["course_name"] . ": " . $row["course_description"];
+                                        $cn5 = $row["course_name"];
                                     }
                                     }
                                 } 
                                 ?>
                             </p>
+                            <input style="font-size: 1px;" name="coursename" value="<?php echo $cn5; ?>" hidden>
                             <p style="margin-top: -5px; margin-left:5px;"> Instructor: 
                                 <?php 
                                 include('schedule_authentication.php'); 
@@ -246,7 +264,8 @@
                                 ?>
                             </p>
                             <br>
-                        </div>
+                            </form>
+                            </button>
                     </div>
                 </div>
 
@@ -255,8 +274,9 @@
                         <div class="col-md-3" style="background-color: white; padding: 0px;">
                             <img src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-image" alt="books">
                         </div>
-                        <div class="col-md-9" style="background-color: white; height:190px;">
-                            <a href="#"> <h2 class="card-title mt-3">
+                        <form action="list_buffer.php" method="POST">
+                        <button type="submit" class="col-md-9" style="background-color: white; height:190px; text-align:left;">
+                        <h2 class="card-title mt-3" style="display: inline-block;">
                                 <?php 
                                 include('schedule_authentication.php'); 
                                 if (mysqli_num_rows($result) > 0) {
@@ -279,11 +299,13 @@
                                     if($row["course_schedule"] == "Saturday")
                                     {
                                         echo $row["course_name"] . ": " . $row["course_description"];
+                                        $cn6 = $row["course_name"];
                                     }
                                     }
                                 } 
                                 ?>
                             </p>
+                            <input style="font-size: 1px;" name="coursename" value="<?php echo $cn6; ?>" hidden>
                             <p style="margin-top: -5px; margin-left:5px;"> Instructor: 
                                 <?php 
                                 include('schedule_authentication.php'); 
@@ -298,7 +320,8 @@
                                 ?>
                             </p>
                             <br>
-                        </div>
+                            </form>
+                            </button>
                     </div>
                 </div>
 
