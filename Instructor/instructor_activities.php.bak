@@ -34,17 +34,15 @@
 				<div class="container-fluid" style="display:flex;">
 				<div class="jumbotron" style="width:45%; height:55vh; border:5px solid #FCCB96; background-color:#EEEDFD; padding:20px;">
 					<div class="container-fluid" style="display:flex;">
-					  <h2 style="color:#282626;text-align: justify; padding-right:420px;">SUBJECT OF ANNOUNCEMENT</h2>
+					  <h2 style="color:#282626;text-align: justify; padding-right:420px;"><?php echo $_POST['subject']; ?></h2>
 					  
 						<a href="instructor_editAnnouncement.php" style="color:white;"><i class="btn fa fa-pencil shesh"  role="button" ></i></a>
 					</div>
 					<br>
-					<p class="container-fluid"style="color:#130d4c; text-align: justify; font-size:16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-					eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p class="container-fluid"style="color:#130d4c; text-align: justify; font-size:16px;"><?php echo $_POST["announcement"]; ?></p>
 					
-					<h2 style="color:#282626;text-align: justify; font-size:18px; text-align: right">Date & Time</h2>
-					<h2 style="color:#282626;text-align: justify; font-size:18px; text-align: right">Professor's Name</h2>
+					<h2 style="color:#282626;text-align: justify; font-size:18px; text-align: right"><?php echo $_POST["date"]; ?></h2>
+					<h2 style="color:#282626;text-align: justify; font-size:18px; text-align: right"><?php echo $_POST["ProfName"]; ?></h2>
 				</div>
 				
 				<div class="jumbotron" style="width:45%; height:55vh; border:5px solid #FCCB96; margin-left:7vw; background-color:#EEEDFD; padding:20px;">

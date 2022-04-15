@@ -32,6 +32,16 @@
 				<hr style="border-top: 3px solid #fccb96; width: 15%">
 				<br>
 				<!--LA PA LAMAN DAHIL SA DB LAMAN NITO??? -->
+				<table class="table table-hover">
+				   <tr>
+					<th>Activity Name</th>
+					<th>Student Name</th>
+					<th>File Name</th>
+					<th>Date & Time of Submission</th>
+					<th>Graded</th>
+				  </tr>
+				  
+				</table>
 			</div>
             
 

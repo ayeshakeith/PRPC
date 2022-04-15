@@ -49,7 +49,7 @@
 				  <p style="font-size:25px; color:#282626; text-align:justify;">INSTRUCTION/S:</p><br>
 				  
 					<div class="container-fluid">
-						<textarea class="form-control" rows="9" name="instruction" required autofocus><?php if (isset($_POST['instruction'])) echo $_POST['instruction']; ?></textarea>
+						<textarea class="form-control" rows="9" name="instruction"><?php if (isset($_POST['instruction'])) echo $_POST['instruction']; ?></textarea>
 						<br>
 					
 					</div>

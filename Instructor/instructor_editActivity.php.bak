@@ -30,17 +30,16 @@
 		
 	<div class="container-fluid">		
 			<div class = "container-fluid body-container">
-				<p style="font-size:35px; color:#DB9A53; text-align:center;">Upload an Activity</p>
+				<p style="font-size:35px; color:#DB9A53; text-align:center;">Edit Activity</p>
 				<hr style="border-top: 3px solid #fccb96; width: 15%">
 
 				<br>
-				<form class="form-horizontal" id="activity" action="instructor_givenActivities.php" method="post">  <!--FORM-->
+				<form class="form-horizontal" id="activity" action="#" method="post"> <!--FORM-->
 				  <div class="form-group">
 					
 						<div class="col-sm-5" style="margin-left:23vw; text-align:center;">
 						
-						<input placeholder="Activity Name/Number" rows="9" id="actNo" name="actNo" style="font-size: 16px; color:black; padding:10px; width:30vw;"type="text" tabindex="1" 
-								 value="<?php if (isset($_POST['actNo'])) echo $_POST['actNo']; ?>" required autofocus>
+						<input type="text" style="font-size:20px;" class="form-control" id="inputPassword" placeholder="Activity Number/Name">
 						
 						</div>
 					
@@ -49,7 +48,7 @@
 				  <p style="font-size:25px; color:#282626; text-align:justify;">INSTRUCTION/S:</p><br>
 				  
 					<div class="container-fluid">
-						<textarea class="form-control" rows="9" name="instruction" required autofocus><?php if (isset($_POST['instruction'])) echo $_POST['instruction']; ?></textarea>
+						<textarea class="form-control" rows="9"></textarea>
 						<br>
 					
 					</div>
