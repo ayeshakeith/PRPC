@@ -83,7 +83,6 @@
             $result = mysqli_query($con, $query);  
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
             $count = mysqli_num_rows($result);
-            
 
             echo '<img style="width: 5%; height:5%; float:right; padding-top:10px; padding-bottom:10px; border-radius: 50%;" src = "data:image/jpeg;base64,'.base64_encode($row['icon']).'"/>'; 
             ?>

@@ -192,7 +192,6 @@
 
                         <?php 
                         include('announcement_authentication.php');
-                        
                         ?>
                         <form action="course_viewannouncement.php" method="POST">    
                         <button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
