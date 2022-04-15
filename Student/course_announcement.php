@@ -3,7 +3,7 @@
 ?>
 <html>
     <head>
-        <title>My Activities</title>
+        <title>My Announcements</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -81,7 +81,7 @@
                 margin-left: 20px;
             }
 
-            .sidebar .links .link:hover{
+            .sidebar .links .link:hover {
                 background-color: #f1ece9;
                 color: #130d4c;
                 cursor: pointer;
@@ -138,20 +138,13 @@
                 height: 83vh;
             }
 
-
-            .table{
-                border: 10px solid #db9a53;
-                margin-top: 25px;
-                background-color: #f6ebe4;
-                height: 58vh;
-
-            }
-
-
-            .table td{
-                border: 30px solid white;
-                text-align: center;
-                font-size: 15px;
+            .announcement-card{
+                margin-top: 50px;
+                border: 5px solid #fdd5ab;
+                background-color: #eeedfd;
+                margin-left: 65px;
+                text-align: left;
+                color: black;
             }
 
 
@@ -182,7 +175,7 @@
             <div class="content">
                     <div class="student-sidebar">
                         <!-- Hello, User is located in student_sidebar.php -->
-                        <?php include('student_sidebar.php'); ?> 
+                        <?php include('course_sidebar.php'); ?> 
                     </div>
 
                     <div class="banner-area">
@@ -191,83 +184,32 @@
                     
                     <div class="content-area">
                         <div class="content-box">
-                            <h2 style="color: #db9a53"> Activities </h2>
-                            <hr style="border-top: 3px solid #fccb96; width: 5%">
+                            <h2 style="color: #db9a53"> Latest Announcements </h2>
+                            <hr style="border-top: 3px solid #fccb96; width: 15%">
 
-                            <div class="table-responsive">
-                                <table class="table">
+                            <div class="row" style="margin: 0 auto">
+                                <div class="announcement-card col-md-5">
+                                    <h3> Subject of Announcement </h3>
+                                    <br>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <br>
+                                    <h4 style="float: right"> Date & Time <br> Professor's Name </h4>
+                                </div>
 
-                                <tbody>
-
-                                <tr>
-                                <td>
-                                    <h3> Activity # </h3>
+                                <div class="announcement-card col-md-5">
+                                    <h3> Subject of Announcement </h3>
                                     <br>
-                                    <p> <b> INSTRUCTIONS: </b> </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <br>
-                                    <button type="button" class="btn btn-primary">View</button>
-                                </td>
-
-                                <td>
-                                    <h3> Activity # </h3>
-                                    <br>
-                                    <p> <b> INSTRUCTIONS: </b> </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <br>
-                                    <button type="button" class="btn btn-primary">View</button>
-                                </td>
-
-                                <td>
-                                    <h3> Activity # </h3>
-                                    <br>
-                                    <p> <b> INSTRUCTIONS: </b> </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <br>
-                                    <button type="button" class="btn btn-primary">View</button>
-                                </td>
-
-                                <td>
-                                    <h3> Activity # </h3>
-                                    <br>
-                                    <p> <b> INSTRUCTIONS: </b> </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <br>
-                                    <button type="button" class="btn btn-primary">View</button>
-                                </td>
-                                </tr>
-                
-                                </tbody>
-                            </table>
+                                    <h4 style="float: right"> Date & Time <br> Professor's Name </h4>
+                                </div>
                             </div>
-
-                            <!-- <div class="row" style="margin: 0 auto">
-                                <div class="announcement-card col-md-5">
-                                    <h3> Subject of Announcement </h3>
-                                    <br>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <br>
-                                    <h4 style="float: right"> Date & Time <br> Professor's Name </h4>
-                                </div>
-
-                                <div class="announcement-card col-md-5">
-                                    <h3> Subject of Announcement </h3>
-                                    <br>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <br>
-                                    <h4 style="float: right"> Date & Time <br> Professor's Name </h4>
-                                </div>
-                            </div> -->
 
                         </div>
                     </div>

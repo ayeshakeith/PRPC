@@ -3,7 +3,7 @@
 ?>
 <html>
     <head>
-        <title>My Activities</title>
+        <title>Pending Works</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -81,7 +81,7 @@
                 margin-left: 20px;
             }
 
-            .sidebar .links .link:hover{
+            .sidebar .links .link:hover {
                 background-color: #f1ece9;
                 color: #130d4c;
                 cursor: pointer;
@@ -123,8 +123,7 @@
                 margin-left:260px;
                 margin-right: 15px;
                 height: 50vh;  
-                text-align: center;
-                color: white;
+                color: black;
                 vertical-align: top;
             }
             
@@ -138,21 +137,27 @@
                 height: 83vh;
             }
 
-
-            .table{
-                border: 10px solid #db9a53;
-                margin-top: 25px;
-                background-color: #f6ebe4;
-                height: 58vh;
-
-            }
-
-
-            .table td{
-                border: 30px solid white;
+            .align-center{
+                margin-top: 3%;
                 text-align: center;
-                font-size: 15px;
             }
+
+            table {
+                border-collapse: collapse;
+                border-left: 50px solid white;
+                border-right: 50px solid white;
+            }
+
+            th, td{
+                text-align:center;
+                border-bottom: 1px solid black !important;
+            }
+
+            td{
+                font-size: 14px;
+            }
+
+
 
 
 
@@ -182,7 +187,7 @@
             <div class="content">
                     <div class="student-sidebar">
                         <!-- Hello, User is located in student_sidebar.php -->
-                        <?php include('student_sidebar.php'); ?> 
+                        <?php include('course_sidebar.php'); ?> 
                     </div>
 
                     <div class="banner-area">
@@ -191,83 +196,46 @@
                     
                     <div class="content-area">
                         <div class="content-box">
-                            <h2 style="color: #db9a53"> Activities </h2>
-                            <hr style="border-top: 3px solid #fccb96; width: 5%">
+                            <h2 class="align-center" style="color: #db9a53"> Pending Works </h2>
+                            <hr style="border-top: 3px solid #fccb96; width: 15%">
+                            <br>
+                            <p style="color: gray; margin-left: 25px;"> Files </p>
 
                             <div class="table-responsive">
                                 <table class="table">
 
+                                <thead>
+                                    <th>Activity Name</th>
+                                    <th>File Attached</th>
+                                    <th>Due Date</th>
+                                    <th> </th>
+                                </thead>
                                 <tbody>
 
                                 <tr>
-                                <td>
-                                    <h3> Activity # </h3>
-                                    <br>
-                                    <p> <b> INSTRUCTIONS: </b> </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <br>
-                                    <button type="button" class="btn btn-primary">View</button>
-                                </td>
+                                    <td> Exercise 4 </td>
+                                    <td> file4.txt </td>
+                                    <td> April 18,2022 3:53am </td>
+                                    <td> <button type="button" name="view" class="btn btn-warning" style="font-size: 12px;"> View </button> </td>
+                                </tr>
 
-                                <td>
-                                    <h3> Activity # </h3>
-                                    <br>
-                                    <p> <b> INSTRUCTIONS: </b> </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <br>
-                                    <button type="button" class="btn btn-primary">View</button>
-                                </td>
+                                <tr>
+                                    <td> Exercise 5 </td>
+                                    <td> file5.txt </td>
+                                    <td> April 19,2022 4:53am </td>
+                                    <td> <button type="button" name="view" class="btn btn-warning" style="font-size: 12px;">View</button> </td>
+                                </tr>
 
-                                <td>
-                                    <h3> Activity # </h3>
-                                    <br>
-                                    <p> <b> INSTRUCTIONS: </b> </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <br>
-                                    <button type="button" class="btn btn-primary">View</button>
-                                </td>
-
-                                <td>
-                                    <h3> Activity # </h3>
-                                    <br>
-                                    <p> <b> INSTRUCTIONS: </b> </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <br>
-                                    <button type="button" class="btn btn-primary">View</button>
-                                </td>
+                                <tr>
+                                    <td> Exercise 6 </td>
+                                    <td> file6.txt </td>
+                                    <td> April 20,2022 5:53am </td>
+                                    <td> <button type="button"name="view"  class="btn btn-warning" style="font-size: 12px;">View</button> </td>
                                 </tr>
                 
                                 </tbody>
                             </table>
                             </div>
-
-                            <!-- <div class="row" style="margin: 0 auto">
-                                <div class="announcement-card col-md-5">
-                                    <h3> Subject of Announcement </h3>
-                                    <br>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <br>
-                                    <h4 style="float: right"> Date & Time <br> Professor's Name </h4>
-                                </div>
-
-                                <div class="announcement-card col-md-5">
-                                    <h3> Subject of Announcement </h3>
-                                    <br>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <br>
-                                    <h4 style="float: right"> Date & Time <br> Professor's Name </h4>
-                                </div>
-                            </div> -->
 
                         </div>
                     </div>

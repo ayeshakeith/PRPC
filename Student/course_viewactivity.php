@@ -129,12 +129,19 @@
             
             .content-box{
                 background-color: white;
+                position: relative;
                 margin: 0 auto;
                 margin-top: 1%;
                 width: 100%;
                 border: 3px solid black;
                 vertical-align: top;
                 height: 83vh;
+            }
+
+            .upload-form{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
             }
 
             .align-center{
@@ -187,14 +194,17 @@
                             <br>
 
                             <!-- this is where to call the submitted file of the teacher -->
-                            <span style="margin-left: 50px; color: gray"> Attached Files: </span> <a href="#"> file.pdf </a>
+                            <span style="margin-left: 50px; color: gray"> Attached Files: </span> <a href="#" > file.pdf </a>
 
-                            <p style="margin-top: 50px; margin-left: 50px; color: gray">Click on the "Choose File" button to upload a file:</p>
+                            <div class="upload-form">
+                                <p style="margin-top: 50px; margin-left: 50px; color: gray">Click on the "Choose File" button to upload a file:</p>
 
-                            <form action="student_previewactivity.php" method="post" enctype="multipart/form-data">
-                            <input type="file" id="actfile" name="actfile" style=" margin-left: 50px;">
-                            <div class="align-center"> <input type="submit" name="submit" value="Submit File"> </div>
-                            </form>
+                                <form action="student_previewactivity.php" method="post" enctype="multipart/form-data">
+                                <input type="file" id="actfile" name="actfile" style=" margin-left: 50px;">
+                                <div class="align-center"> <input type="submit" name="submit" value="Submit File"> </div>
+                                </form>
+                            </div>
+                            
 
                         </div>
                     </div>
