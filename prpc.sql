@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2022 at 06:06 PM
+-- Generation Time: Apr 15, 2022 at 07:53 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -28,7 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `announcement` (
+  `announcement_id` int(11) NOT NULL,
   `course_name` varchar(100) NOT NULL,
+  `course_instructor` varchar(100) NOT NULL,
   `course_section` varchar(100) NOT NULL,
   `announcement_title` varchar(200) NOT NULL,
   `announcement_content` varchar(500) NOT NULL,
@@ -39,8 +41,19 @@ CREATE TABLE `announcement` (
 -- Dumping data for table `announcement`
 --
 
-INSERT INTO `announcement` (`course_name`, `course_section`, `announcement_title`, `announcement_content`, `date`) VALUES
-('CS126L', 'BM1', 'Weekly Assessment', 'There will be an assessment this week about the topics we have covered this week. Review all terms.', '2022-04-14 13:20:08');
+INSERT INTO `announcement` (`announcement_id`, `course_name`, `course_instructor`, `course_section`, `announcement_title`, `announcement_content`, `date`) VALUES
+(1, 'CS126L', 'Kento Nanami', 'BM1', 'Weekly Assessment', 'There will be an assessment this week about the topics we have covered this week. Review all terms.\r\n\r\nComputer programming is the process that professionals use to write code that instructs how a computer, application or software program performs. At its most basic, computer programming is a set of instructions to facilitate specific actions.', '2022-04-14 13:20:08'),
+(2, 'CS126L', 'Kento Nanami', 'BM1', 'Reading Week', 'In line with our college\'s reading month, I am requiring all students to read about what the following jobs do (select one only, minimum of 3 articles read): Software application developer, Web developer, Computer systems engineer, Database administrator, Computer systems analyst, Software quality assurance (QA) engineer, Business intelligence analyst, or a Computer programmer. You don\'t need to submit any paper, but there will be a recitation next meeting.', '2022-04-15 07:21:23'),
+(3, 'IT145L', 'Satoru Gojo', 'BM1', 'Synchronous Week', 'Good day, class. We will be having a synchronous session this week wherein I will be discussing the fundamentals of Information Technology. We will also have a short recitation for class participation, so read up on current news relating to the field. See you on Tuesday.', '2022-04-15 07:28:40'),
+(4, 'IT145L', 'Satoru Gojo', 'BM2', 'First Meeting', 'Good day, class. For our first meeting, we will have a short recitation for class participation, so read up on current news relating to the field. This will be graded as an assessment of your current knowledge and how you\'re willing to do some advance reading. See you on Friday.', '2022-04-15 07:28:40'),
+(6, 'GED145', 'Iori Utahime', 'BM1', 'Welcome to History and Culture!', 'For our first meeting, attendance is a must. We will be proceeding with a heavy lecture immediately because we would not be having a synchronous meeting next week, and the week after that is assigned by the department to be a quiz week, so we should have a discussion already. Read up on pre-colonial Philippines when you have time.', '2022-04-15 07:34:37'),
+(7, 'GED145', 'Kento Nanami', 'BM2', 'First Assignment', 'Will not be available this week due to a department meeting scheduled this Thursday, so just turn view local films that depict the rich and colorful history and culture of the Philippines during our time period. We will have a recitation next week. Thanks.', '2022-04-15 07:34:37'),
+(8, 'GED120', 'Toji Fushiguro', 'BM1', 'No Meeting on Thursday', 'Good day, class. I won\'t be able to meet you for a synchronous session this Thursday due to personal reasons. In the meantime, memorize the every bone in the human body for a recitation next week. Graded. See you.', '2022-04-15 07:39:39'),
+(9, 'GED120', 'Iori Utahime', 'BM2', 'Welcome to General Psychology!', 'Hi class! For our first meeting, we will have a general overview of what the course will be about, and I will be squeezing in next week\'s lecture as well. Make sure to come to class for the maximum absences for this course is only 1. See you on Wednesday, and do not be late.', '2022-04-15 07:39:39'),
+(10, 'CS145', 'Satoru Gojo', 'BM1', 'Weekly Assessment', 'We will have a weekly assessment this Friday via recitation. Just read about recent articles about Computer Science, and some prominent Filipino figures in the field. This will be graded, so make sure to study.', '2022-04-15 07:39:39'),
+(11, 'CS145', 'Toji Fushiguro', 'BM2', 'Weekly Assessment (Paired)', 'We will have a weekly assessment this Tuesday via paired recitation. Study about the technologies used in Computer Science, as well as the developers and creators of such technologies. Reminder: weekly assessments are graded.', '2022-04-15 07:39:39'),
+(12, 'IT180L', 'Iori Utahime', 'BM2', 'Welcome to Network Technologies!', 'Class, for this week\'s meeting, we will only have a course orientation wherein I will also discuss the course syllabus. Still, make sure to attend. I was able to limit the department\'s maximum number of absences to 1, so every meeting counts. See you on Monday.', '2022-04-15 07:46:18'),
+(13, 'IT180L', 'Kento Nanami', 'BM1', 'Asynchronous Session', 'We will have an asynchronous session for this week. I\'m still computing the first year\'s annual assessment, so I will be very busy this week. Regardless, I have already uploaded your weekly activity, Assignment 1.1. Make sure to submit it before deadline.', '2022-04-15 07:48:43');
 
 -- --------------------------------------------------------
 
@@ -162,6 +175,12 @@ INSERT INTO `user_login` (`user_id`, `email`, `username`, `password`, `firstname
 --
 
 --
+-- Indexes for table `announcement`
+--
+ALTER TABLE `announcement`
+  ADD PRIMARY KEY (`announcement_id`);
+
+--
 -- Indexes for table `course`
 --
 ALTER TABLE `course`
@@ -182,6 +201,12 @@ ALTER TABLE `user_login`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `announcement`
+--
+ALTER TABLE `announcement`
+  MODIFY `announcement_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `course`
