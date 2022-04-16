@@ -163,17 +163,17 @@
             <div class="content">
                     <div class="student-sidebar">
                         <!-- Hello, User is located in student_sidebar.php -->
-                        <?php include('student_sidebar.php'); ?> 
+                        <?php include('course_sidebar.php'); ?> 
                     </div>
 
                     <div class="banner-area">
-                        <h1> SUBJECT NAME </h1>
+                        <h1> <?php echo $_SESSION["coursecode"]; ?> </h1>
                     </div>
                     
                     <div class="content-area">
                         <div class="content-box">
                             <br>
-                            <h2 style="text-align: center"> Activity # </h2>
+                            <h2 style="text-align: center"> <?php echo $_SESSION["activitytitle"]; ?> </h2>
 
                             <br>
 
@@ -211,14 +211,7 @@
 
                             <?php 
                                 
-                                include('dbconnection.php');
-
-                                        $sql = "select * from announcement where course_name = 'CS126L'";
-                                        $result = mysqli_query($con, $sql);
-                                        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                                        $count = mysqli_num_rows($result);
-
-                            echo $row["announcement_content"];
+                                echo $_SESSION["activitydescription"];
 
                             ?> 
 

@@ -181,14 +181,14 @@
                         <div class="content-box" style="padding:10px;">
                             
                             <br>
-                            <h2 style="text-align: center"> <?php echo $_POST["activitytitle"]; ?> </h2>
+                            <h2 style="text-align: center"> <?php $_SESSION["activitytitle"] = $_POST["activitytitle"]; echo $_SESSION["activitytitle"]; ?> </h2>
 
                             <hr style="width: 80%;">
 
                             <br><br>
 
                             <p style="text-align:justify; margin-right:50px; margin-left:50px;">
-                            <?php echo $_POST["activitydescription"]; ?>
+                            <?php $_SESSION["activitydescription"] = $_POST["activitydescription"]; echo $_SESSION["activitydescription"]; ?>
                             </p>
 
                             <br>
@@ -199,7 +199,7 @@
                             <div class="upload-form">
                                 <p style="margin-top: 50px; margin-left: 50px; color: gray">Click on the "Choose File" button to upload a file:</p>
 
-                                <form action="student_previewactivity.php" method="post" enctype="multipart/form-data">
+                                <form action="course_previewactivity.php" method="post" enctype="multipart/form-data">
                                 <input type="file" id="actfile" name="actfile" style=" margin-left: 50px;">
                                 <div class="align-center"> <input type="submit" name="submit" value="Submit File"> </div>
                                 </form>
