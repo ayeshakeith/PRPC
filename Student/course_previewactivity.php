@@ -181,31 +181,7 @@
 
                             <?php
                                 if (isset($_POST['submit'])){
-                                    $file = $_FILES['actfile'];
-
-                                    $fileName = $_FILES['actfile']['name'];
-                                    $fileTmpName = $_FILES['actfile']['tmp_name']; 
-                                    $fileSize = $_FILES['actfile']['size'];
-                                    $fileError = $_FILES['actfile']['error'];
-                                    $fileType = $_FILES['actfile']['type'];
-
-                                    $fileExt = explode('.', $fileName);
-                                    $fileActualExtension = strtolower(end($fileExt));
-                                    $allowedExt = array('txt', 'cpp', 'pdf');
-
-                                    if (in_array($fileActualExtension, $allowedExt)){
-                                        if ($fileError === 0){
-                                            
-                                            print_r($file);
-
-                                        } 
-                                        else{
-                                            echo "there was an error uploading your file!";
-                                        }
-                                    }
-                                    else {
-                                        echo "you cannot upload files of this type!";
-                                    }
+                                    $contents = file_get_contents($_FILES['actfile']['tmp_name']);
                                 }
                             ?>
 
@@ -215,8 +191,14 @@
 
                             ?> 
 
-                        <iframe src = "<?php echo $_FILES['actfile']?>" title="W3Schools Free Online Web Tutorials" width="1100" height="300">
-                        </iframe>
+                        <br><br>
+
+                        <div style="text-align: center;">
+                            <form action="submitactivity_authentication.php" method="post">
+                            <textarea name="submissionfile" rows="8" cols="150" style="resize: none; overflow-y: scroll;"><?php echo $contents; ?></textarea>
+                            <div class="align-center"> <input type="submit" name="submit" value="Submit"> </div>
+                            </form>
+                        </div>
 
                         </div>
                     </div>

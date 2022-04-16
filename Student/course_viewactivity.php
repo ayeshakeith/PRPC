@@ -201,7 +201,7 @@
 
                                 <form action="course_previewactivity.php" method="post" enctype="multipart/form-data">
                                 <input type="file" id="actfile" name="actfile" style=" margin-left: 50px;">
-                                <div class="align-center"> <input type="submit" name="submit" value="Submit File"> </div>
+                                <div class="align-center"> <input type="submit" name="submit" value="Preview"> </div>
                                 </form>
                             </div>
                             
