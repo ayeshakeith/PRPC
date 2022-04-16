@@ -46,8 +46,8 @@
 		<p style="color: white; font-size: 20px;"><i class="fa fa-user" style="font-size:30px; color:white; margin-left:2vw; margin-bottom:12vh;"></i> &nbsp; <?php echo $_SESSION["name"]; ?></p>
         <li><a href="class_announcement.php" style="color: white; font-size: 20px;"><i class="fa fa-bell" style="font-size:32px; color:white;"></i> &nbsp; ANNOUNCEMENT</a></li><br>
         <li><a href="class_activity.php" style="color: white; font-size: 20px;"><i class="fa fa-upload" style="font-size:32px; color:white;"></i> &nbsp;ACTIVITY</a></li>
-        <li><a href="instructor_givenActivities.php" style="color: white; font-size: 20px;"><i class="fa fa-list" style="font-size:32px; color:white;"></i> &nbsp;GIVEN ACTIVITIES</a></li>
-		<li><a href="instructor_ungraded.php" style="color: white; font-size: 20px;"><i class="fa fa-times" style="font-size:32px; color:white;"></i> &nbsp;UNGRADED WORK</a></li>
+        <li><a href="instructor_givenActivities - mark.php" style="color: white; font-size: 20px;"><i class="fa fa-list" style="font-size:32px; color:white;"></i> &nbsp;GIVEN ACTIVITIES</a></li>
+		<li><a href="instructor_ungraded - mark.php" style="color: white; font-size: 20px;"><i class="fa fa-times" style="font-size:32px; color:white;"></i> &nbsp;UNGRADED WORK</a></li>
         </ul>
         
     </div>
