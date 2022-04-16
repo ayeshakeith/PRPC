@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2022 at 07:04 PM
+-- Generation Time: Apr 16, 2022 at 06:19 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -141,6 +141,7 @@ CREATE TABLE `submissions` (
   `deliverable_id` int(11) NOT NULL,
   `student_name` varchar(100) NOT NULL,
   `student_section` varchar(100) NOT NULL,
+  `course_name` varchar(100) NOT NULL,
   `submission_file` text NOT NULL,
   `submission_grade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -196,6 +197,12 @@ ALTER TABLE `course`
 -- Indexes for table `deliverable`
 --
 ALTER TABLE `deliverable`
+  ADD PRIMARY KEY (`deliverable_id`);
+
+--
+-- Indexes for table `submissions`
+--
+ALTER TABLE `submissions`
   ADD PRIMARY KEY (`deliverable_id`);
 
 --
