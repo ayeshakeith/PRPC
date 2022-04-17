@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <style>
             .navbar-sticky{
                 position: fixed;
