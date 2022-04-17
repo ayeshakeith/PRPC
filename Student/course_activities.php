@@ -2,6 +2,7 @@
     session_start();
     unset($_SESSION['activitytitle']);
     unset($_SESSION['activitydescription']);
+    unset($_SESSION['did']);
 ?>
 <html>
     <head>
@@ -192,6 +193,7 @@
                             </div>
                             <hr style="width: 100%;">
                             <p class="mb-1"><input name="activitydescription" value="<?php echo $row["deliverable_description"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" readonly></p>
+                            <input name="did" value="<?php echo $row["deliverable_id"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" hidden>
                         </button>
                         </form>
                         <?php ?>
@@ -208,6 +210,8 @@
                             </div>
                             <hr style="width: 100%;">
                             <p class="mb-1"><input name="activitydescription" value="<?php echo $row["deliverable_description"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" readonly></p>
+                            <input name="did" value="<?php echo $row["deliverable_id"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" hidden>
+                            
                         </button>
                         </form>
                         <?php } ?>

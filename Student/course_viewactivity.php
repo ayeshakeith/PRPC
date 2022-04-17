@@ -181,7 +181,7 @@
                         <div class="content-box" style="padding:10px;">
                             
                             <br>
-                            <h2 style="text-align: center"> <?php $_SESSION["activitytitle"] = $_POST["activitytitle"]; echo $_SESSION["activitytitle"]; ?> </h2>
+                            <h2 style="text-align: center"> <?php $_SESSION["activitytitle"] = $_POST["activitytitle"]; $_SESSION["did"] = $_POST["did"]; echo $_SESSION["activitytitle"]; ?> </h2>
 
                             <hr style="width: 80%;">
 

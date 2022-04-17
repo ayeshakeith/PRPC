@@ -10,7 +10,9 @@
 	
 	$submissionfile = $_POST['submissionfile'];
 
-	$sql = "INSERT INTO submissions (student_name, student_section, course_name, submission_file) VALUES ('$studentname','$coursesection','$coursename','$submissionfile')";
+	$did = $_SESSION["did"];
+
+	$sql = "INSERT INTO submissions (deliverable_id, student_name, student_section, course_name, submission_file) VALUES ('$did', '$studentname','$coursesection','$coursename','$submissionfile')";
 	
 	if(mysqli_query($con, $sql)) {
 		ob_start();
