@@ -3,7 +3,7 @@
 ?>
 <html>
     <head>
-        <title>Create Announcement</title>
+        <title>Instructor Dashboard</title>
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -23,37 +23,40 @@
             <?php include('instructor_navbar.php'); ?>
 			<?php include('class_sidebar.php'); ?>
 			
-		
 			<div class = "container-fluid header-container">
 				<p style="font-size:32px; color:white;"><?php echo $_SESSION["classcode"] . " - " . $_SESSION["classsec"] ?></p>
 			</div>
-		
-	<div class="container-fluid">		
-			<div class = "container-fluid body-container">
-				<p style="font-size:35px; color:#DB9A53; text-align:center;">Create Announcement</p>
-				<hr style="border-top: 3px solid #fccb96; width: 15%">
 
-				<br><br><br>
-				<!--FORM-->
-				<form class="form-horizontal" id="activity" action="addannouncement_authentication.php" method="post"> 
-				  
-					<div class="container-fluid">
-					<input placeholder="Subject of Announcement" id="subject" name="subject" style="font-size: 14px; color:black; padding:10px; width:30vw;"type="text" tabindex="1" 
-								 value="" required autofocus> <br><br>
-						<textarea class="form-control" rows="5" name="content" placeholder="Announcement Content"><?php if (isset($_POST['announcement'])) echo $_POST['announcement']; ?></textarea>
-						<br>
-					
-					</div>
+			
+			<form class="form-horizontal" id="announcement" action="deleteannouncement_authentication.php" method="post"> 
+			<div class = "container-fluid body-container" style="display: inline-block; color:black;">
 
-						<div class="container-fluid" style="text-align:center; margin-top:50px;">
-							<button type="submit" class="btn btn-default" style="width:8vw; background-color:#DB9A53; color: white;">Post</button>
+                            <br>
+                            <h2 style="text-align: center"><?php echo $_POST["announcementtitle"]; ?></h2>
+
+                            <hr style="width: 80%;">
+
+                            <br><br>
+
+                            <p style="text-align:justify; margin-right:50px; margin-left:50px;">
+                            <?php echo $_POST["announcementdescription"]; ?>
+                            </p>
+
+                            <input name="announcementid" value="<?php echo $_POST["aid"]; ?>" style="border:0px; font-size:0px; width:0%; line-height: 0px;" hidden>
+
+                            <br>
+
+                        <div class="container-fluid" style="text-align:center; margin-top:50px;">
+							    <button type="submit" class="btn btn-default" style="width:8vw; background-color:#DB9A53; color: white;">Delete</button>
 								&nbsp;&nbsp;&nbsp;
-								<a href="class_announcement.php" style="color:white;"><button type="button" class="btn btn-default" style="width:8vw; background-color:#130d4c; color: white;">Cancel</button></a>
+								<a href="class_announcement.php" style="color:white;"><button type="button" class="btn btn-default" style="width:8vw; background-color:#130d4c; color: white;">Back</button></a>
 						</div>
-					
-				</form>
 			</div>
-    </div>      
+			</form>
+
+
+
+            
 
             <footer class="footer-container"> </footer>
     </body>

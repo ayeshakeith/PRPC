@@ -52,33 +52,38 @@
                    	?>
 					<div style="display:inline-block">
 					<div class="list-group" style="height:300px; margin-left:50px; width:660px; overflow:scroll; -webkit-overflow-scrolling: touch;">
+					<form action="class_viewannouncement.php" method="POST">   
 					<button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
 							<div class="d-flex w-100 justify-content-between">
 							<u><h4 class="mb-1"><input name="announcementtitle" value="<?php echo $row["announcement_title"]; ?>" style="border:0px; font-size:20px; width:100%; line-height: 35px;" readonly></h4></u>
 							<p class="mb-1"><input name="announcementdescription" value="<?php echo $row["announcement_content"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" readonly></p>
 							</div>
+							<input name="aid" value="<?php echo $row["announcement_id"]; ?>" style="border:0px; font-size:0px; width:0%; line-height: 0px;" hidden>
 							<hr style="width: 100%;">
 							<small style="float: right"> Posted On: <?php echo $row["date"]; ?></small>
 							<br>
 							<small style="float: right"> Posted By: <?php echo $row["course_instructor"]; ?></small>
                     </button>
+					</form>
 					
 					<?php 
                         include('announcement_authentication.php');
                         while($row = mysqli_fetch_assoc($result)) {
                     ?>
 
+					<form action="class_viewannouncement.php" method="POST">   
 					<button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
 							<div class="d-flex w-100 justify-content-between">
 							<u><h4 class="mb-1"><input name="announcementtitle" value="<?php echo $row["announcement_title"]; ?>" style="border:0px; font-size:20px; width:100%; line-height: 35px;" readonly></h4></u>
 							<p class="mb-1"><input name="announcementdescription" value="<?php echo $row["announcement_content"]; ?>" style="border:0px; font-size:15px; width:100%; line-height: 35px;" readonly></p>
 							</div>
+							<input name="aid" value="<?php echo $row["announcement_id"]; ?>" style="border:0px; font-size:0px; width:0%; line-height: 0px;" hidden>
 							<hr style="width: 100%;">
 							<small style="float: right"> Posted On: <?php echo $row["date"]; ?></small>
 							<br>
 							<small style="float: right"> Posted By: <?php echo $row["course_instructor"]; ?></small>
                     </button>
-					
+					</form>
 
 					<?php
 						}
