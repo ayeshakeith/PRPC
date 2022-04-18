@@ -8,11 +8,12 @@
 	$coursename = $_SESSION["coursecode"];
 	$coursesection = $_SESSION["section"];
 	
+	$filename = $_POST['filename'];
 	$submissionfile = $_POST['submissionfile'];
 
 	$did = $_SESSION["did"];
 
-	$sql = "INSERT INTO submissions (deliverable_id, student_name, student_section, course_name, submission_file) VALUES ('$did', '$studentname','$coursesection','$coursename','$submissionfile')";
+	$sql = "INSERT INTO submissions (deliverable_id, student_name, student_section, course_name, submission_filename, submission_file, submission_date) VALUES ('$did', '$studentname','$coursesection','$coursename', '$filename', '$submissionfile', now())";
 	
 	if(mysqli_query($con, $sql)) {
 		ob_start();

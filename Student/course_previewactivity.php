@@ -181,6 +181,7 @@
 
                             <?php
                                 if (isset($_POST['submit'])){
+                                    $filename = $_FILES['actfile']['name'];
                                     $contents = file_get_contents($_FILES['actfile']['tmp_name']);
                                 }
                             ?>
@@ -195,8 +196,9 @@
 
                         <div style="text-align: center;">
                             <form action="submitactivity_authentication.php" method="post">
+                            <textarea name="filename" rows="1" cols="150"><?php echo $filename; ?></textarea>
                             <textarea name="submissionfile" rows="8" cols="150" style="resize: none; overflow-y: scroll;"><?php echo $contents; ?></textarea>
-                            <div class="align-center"> <input type="submit" name="submit" value="Submit"> </div>
+                            <div class="align-center" style="margin-top:55px;"> <input type="submit" name="submit" value="Submit"> </div>
                             </form>
                         </div>
 
