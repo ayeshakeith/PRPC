@@ -32,11 +32,11 @@
 				<hr style="border-top: 3px solid #fccb96; width: 15%">
 				<br>
 
-				<table class="table table-hover">
+				<table class="table table-hover" id="submissiontable">
 				   <tr>
-					<th>Activity Name</th>
+					<th onclick="sortTable(0)">Activity Name</th>
 					<th>Student Name</th>
-					<th>File Name</th>
+					<th onclick="sortTable(1)">File Name</th>
 					<th>Date & Time of Submission</th>
 					<th>Grade</th>
 				  </tr>
@@ -110,6 +110,8 @@
 
 				</table>
 			</div>
+
+			<?php include('submission_sort.php'); ?>
             
 
             <footer class="footer-container"> </footer>
