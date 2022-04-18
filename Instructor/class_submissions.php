@@ -1,5 +1,7 @@
 <?php
     session_start();
+
+	unset($_SESSION['test']);
 ?>
 <html>
     <head>
@@ -43,7 +45,10 @@
 				  </tr>
 				  <?php include('submission_authentication.php');
 				  ?>
+				  <form action="class_viewsubmission.php" method="POST">   
+				  
 				  <tr>
+				  	  
 					  <td>
 						  <?php 
 							$refid = $row["deliverable_id"]; 
@@ -60,7 +65,7 @@
 						  ?>
 					  </td>
 					  <td><?php include('submission_authentication.php'); echo $row['student_name']; ?></td>
-					  <td><?php echo $row['submission_filename']; ?></td>
+					  <td><?php $gradeid = $row['submission_filename']; echo $gradeid; ?></td>
 					  <td><?php echo $row['submission_date']; ?></td>
 					  <td>
 					  	<?php 
@@ -69,10 +74,17 @@
 						  {
 							  echo "N/A";
 						  }
-						  else echo $row['submission_grade'];
+						  else 
+						  {
+							  echo $row['submission_grade']; 
+						  }
 						?>
 					  </td>
-				  </tr>
+					  <input name="gradeid" value="<?php echo $gradeid; ?>" style="border:0px; font-size:0px; width:0%; line-height: 0px;" hidden>
+					  <td><button type="submit">View</button></td>
+					  </tr>
+				  
+				  </form>
 				  <?php 
 				  $refid = $row["deliverable_id"]; 
 
@@ -89,10 +101,13 @@
 				  include('submission_authentication.php');
 				  while($row = mysqli_fetch_assoc($result)) {
 				  ?>
+				  <form action="class_viewsubmission.php" method="POST">   
+				  
 				  <tr>
+				  	  
 					  <td><?php echo $ref; ?></td>
 					  <td><?php echo $row['student_name']; ?></td>
-					  <td><?php echo $row['submission_filename']; ?></td>
+					  <td><?php $gradeid = $row['submission_filename']; echo $gradeid ?></td>
 					  <td><?php echo $row['submission_date']; ?></td>
 					  <td>
 					  	<?php 
@@ -100,14 +115,20 @@
 						  {
 							  echo "N/A";
 						  }
-						  else echo $row['submission_grade'];
+						  else 
+						  {
+							  echo $row['submission_grade']; 
+						  }
 						?>
 					  </td>
+					  <input name="gradeid" value="<?php echo $gradeid; ?>" style="border:0px; font-size:0px; width:0%; line-height: 0px;" hidden>
+					  <td><button type="submit">View</button></td>
 				  </tr>
+				  
 				  <?php
 						}
 				  ?>
-
+				  </form>
 				</table>
 			</div>
 
