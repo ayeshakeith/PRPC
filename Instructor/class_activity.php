@@ -52,6 +52,8 @@
                    	?>
 					<div style="display:inline-block">
 					<div class="list-group" style="height:300px; margin-left:50px; width:660px; overflow:scroll; -webkit-overflow-scrolling: touch;">
+
+					<form action="class_viewactivity.php" method="POST">   
 					<button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
 							<div class="d-flex w-100 justify-content-between">
 							<u><h4 class="mb-1"><input name="activitytitle" value="<?php echo $row["deliverable_title"]; ?>" style="border:0px; font-size:20px; width:100%; line-height: 35px;" readonly></h4></u>
@@ -61,12 +63,14 @@
 							<small style="float: right"> Deadline: <?php echo $row["deliverable_duedate"]; ?></small>
 							<br>
                     </button>
+					</form>
 					
 					<?php 
                         include('activity_authentication.php');
                         while($row = mysqli_fetch_assoc($result)) {
                     ?>
 
+					<form action="class_viewactivity.php" method="POST">   
                     <button type="submit" class="list-group-item list-group-item-action flex-column align-items-start">
 							<div class="d-flex w-100 justify-content-between">
 							<u><h4 class="mb-1"><input name="activitytitle" value="<?php echo $row["deliverable_title"]; ?>" style="border:0px; font-size:20px; width:100%; line-height: 35px;" readonly></h4></u>
@@ -76,6 +80,7 @@
 							<small style="float: right"> Deadline: <?php echo $row["deliverable_duedate"]; ?></small>
 							<br>
                     </button>
+					</form>
 					
 
 					<?php
