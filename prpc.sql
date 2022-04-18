@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2022 at 06:19 AM
+-- Generation Time: Apr 18, 2022 at 01:30 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -54,10 +54,12 @@ INSERT INTO `announcement` (`announcement_id`, `course_name`, `course_instructor
 (11, 'CS145', 'Toji Fushiguro', 'BM2', 'Weekly Assessment (Paired)', 'We will have a weekly assessment this Tuesday via paired recitation. Study about the technologies used in Computer Science, as well as the developers and creators of such technologies. Reminder: weekly assessments are graded.', '2022-04-15 07:39:39'),
 (12, 'IT180L', 'Iori Utahime', 'BM2', 'Welcome to Network Technologies!', 'Class, for this week\'s meeting, we will only have a course orientation wherein I will also discuss the course syllabus. Still, make sure to attend. I was able to limit the department\'s maximum number of absences to 1, so every meeting counts. See you on Monday.', '2022-04-15 07:46:18'),
 (13, 'IT180L', 'Kento Nanami', 'BM1', 'Asynchronous Session', 'We will have an asynchronous session for this week. I\'m still computing the first year\'s annual assessment, so I will be very busy this week. Regardless, I have already uploaded your weekly activity, Assignment 1.1. Make sure to submit it before deadline.', '2022-04-15 07:48:43'),
-(14, 'CS126L', 'Kento Nanami', 'BM1', 'Programming Activity 1 (Link Details)', 'Programming Activity 1 has been uploaded. Make sure to read the brief lesson about what the activity is all about, and ensure that you have followed all instructions before submitting. Else, you will get a zero mark. Note: this activity comprises 10% of your final grade.', '2022-04-15 08:43:31'),
 (15, 'IT145L', 'Satoru Gojo', 'BM1', 'Weekly Attendance', 'For your weekly attendance, keep a screenshot of your working screen. Compile all screenshots and I will collect them by the end of the term. Make sure that your screenshots will have watermarks, for verification purposes.', '2022-04-15 16:41:15'),
 (16, 'IT145L', 'Satoru Gojo', 'BM1', 'Missing Works', 'For students with pending grades, kindly send me a message through MS Teams. I will only entertain messages this week, so make sure to do so in time. Thanks.', '2022-04-15 16:48:25'),
-(21, 'CS145', 'Satoru Gojo', 'BM1', 'Class Representative', 'I need a class representative for this course — first volunteer will get extra credits. Send me a message on MS Teams with your complete name and section.', '2022-04-15 23:56:49');
+(21, 'CS145', 'Satoru Gojo', 'BM1', 'Class Representative', 'I need a class representative for this course — first volunteer will get extra credits. Send me a message on MS Teams with your complete name and section.', '2022-04-15 23:56:49'),
+(22, 'IT145L', 'Satoru Gojo', 'BM1', 'test', 'test', '2022-04-16 12:39:38'),
+(23, 'CS126L', 'Kento Nanami', 'BM1', 'Programming Activity 1 (Link Details)', 'Programming Activity 1 has been uploaded. Make sure to read the brief lesson about what the activity is all about, and ensure that you have followed all instructions before submitting. Else, you will get a zero mark. Note: this activity comprises 10% of your final grade.', '2022-04-18 12:20:33'),
+(24, 'CS126L', 'Kento Nanami', 'BM2', 'Group Presentation', 'We will have an impromptu group presentation next meeting about our previous lecture. Be ready.', '2022-04-18 19:30:27');
 
 -- --------------------------------------------------------
 
@@ -142,9 +144,21 @@ CREATE TABLE `submissions` (
   `student_name` varchar(100) NOT NULL,
   `student_section` varchar(100) NOT NULL,
   `course_name` varchar(100) NOT NULL,
+  `submission_filename` varchar(100) NOT NULL,
   `submission_file` text NOT NULL,
+  `submission_date` datetime DEFAULT NULL,
   `submission_grade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `submissions`
+--
+
+INSERT INTO `submissions` (`deliverable_id`, `student_name`, `student_section`, `course_name`, `submission_filename`, `submission_file`, `submission_date`, `submission_grade`) VALUES
+(1, 'Ayesha Keith Santos', 'BM1', 'CS126L', 'SANTOS_programmingact1.cpp', '#include <iostream>\r\n#include <ctime>\r\n#include <cstdlib>\r\nusing namespace std;\r\nint main() \r\n{   \r\n  srand(time(0));\r\n \r\n  cout<<\"Random numbers generated between 1 and 10:\"<<endl;\r\n  for(int i=0;i<10;i++)\r\n      cout << (rand() % 10) + 1<<\" \";  \r\n  return 0; \r\n}', '2022-04-18 11:21:13', 100),
+(2, 'Caethal Ryoko', 'BM2', 'CS126L', 'RYOKO_programmingact1.cpp', '#include <iostream>\r\n#include <ctime>\r\n#include <cstdlib>\r\nusing namespace std;\r\nint main() \r\n{   \r\n  srand(time(0));\r\n \r\n  cout<<\"Random numbers generated between 1 and 10:\"<<endl;\r\n  for(int i=0;i<10;i++)\r\n      cout << (rand() % 10) + 1<<\" \";  \r\n  return 0; \r\n}', '2022-04-18 19:28:50', 0),
+(7, 'Ayesha Keith Santos', 'BM1', 'CS126L', 'SANTOS_homework1.cpp', '#include <iostream>\r\n#include <cstdlib>\r\nusing namespace std;\r\nint main() \r\n{   \r\n  string phrase = \"\";\r\n  cout<<\"Enter a phrase:\";\r\n  cin>>phrase;\r\n\r\n  cout<<endl<<phrase;\r\n  return 0; \r\n}', '2022-04-18 11:30:55', 0),
+(14, 'Caethal Ryoko', 'BM2', 'CS126L', 'RYOKO_homework1.cpp', '#include <iostream>\r\n#include <cstdlib>\r\nusing namespace std;\r\nint main() \r\n{   \r\n  string phrase = \"\";\r\n  cout<<\"Enter a phrase:\";\r\n  cin>>phrase;\r\n\r\n  cout<<endl<<phrase;\r\n  return 0; \r\n}', '2022-04-18 19:28:25', 0);
 
 -- --------------------------------------------------------
 
@@ -219,7 +233,7 @@ ALTER TABLE `user_login`
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `announcement_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `announcement_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `course`
@@ -231,7 +245,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `deliverable`
 --
 ALTER TABLE `deliverable`
-  MODIFY `deliverable_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `deliverable_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `user_login`
