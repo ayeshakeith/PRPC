@@ -13,7 +13,7 @@ session_start();
 
     if($password == $confirmpassword)
     {
-        $sql = "UPDATE login SET login_password='$confirmpassword' WHERE login_username='$username'";
+        $sql = "UPDATE user_login SET password='$confirmpassword' WHERE username='$username'";
 
         if (mysqli_query($con, $sql)) {
             ob_start();

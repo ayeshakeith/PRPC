@@ -9,7 +9,7 @@ session_start();
     $username = $_POST['username'];  
     
       
-            $sql = "select * from login where login_email = '$email' and login_username = '$username'";
+            $sql = "select * from user_login where email = '$email' and username = '$username'";
             $result = mysqli_query($con, $sql);  
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
             $count = mysqli_num_rows($result);  
