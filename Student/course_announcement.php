@@ -118,7 +118,7 @@
             }
 
             .content-area{
-                background-color: red;
+                background-color: #f1ece9;
                 margin-top:16px;
                 margin-left:260px;
                 margin-right: 15px;
