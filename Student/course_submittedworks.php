@@ -199,13 +199,12 @@
                             <h2 class="align-center" style="color: #db9a53"> Submitted Works </h2>
                             <hr style="border-top: 3px solid #fccb96; width: 15%">
                             <br>
-                            <p style="color: gray; margin-left: 25px;"> Files </p>
 
                             <div class="table-responsive">
                                 <table class="table">
 
                                 <thead>
-                                    <th>Activity Name</th>
+                                    <th onclick="sortTable(0)">Activity Name</th>
                                     <th>File Name</th>
                                     <th>Date & Time of Submission</th>
                                     <th>Graded</th>
@@ -213,25 +212,85 @@
                                 <tbody>
 
                                 <tr>
-                                    <td> Exercise 1 </td>
-                                    <td> file1.txt </td>
-                                    <td> April 15,2022 12:53am </td>
-                                    <td> Yes </td>
+                                    <td> 
+                                    <?php 
+                                    include('dbconnection.php');
+                                    $section = $_SESSION['section'];
+                                    $name = $_SESSION['name'];
+                                    $id = $_SESSION['coursecode'];
+                                    
+                                    $query = "SELECT * from deliverable WHERE course_section = '$section' and course_name = '$id'";
+
+                                    $result = mysqli_query($con, $query);  
+                                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+                                    $count = mysqli_num_rows($result);
+
+                                    echo $row['deliverable_title']; 
+                                    ?> 
+                                    </td>
+                                    <td> 
+                                    <?php
+                                    include('dbconnection.php');
+                                    $section = $_SESSION['section'];
+                                    $name = $_SESSION['name'];
+                                    $id = $_SESSION['coursecode'];
+                                    
+                                    $query = "SELECT * from submissions WHERE student_section = '$section' and course_name = '$id' and student_name = '$name'";
+
+                                    $result = mysqli_query($con, $query);  
+                                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+                                    $count = mysqli_num_rows($result);
+
+                                    echo $row['submission_filename']; 
+                                    ?> 
+                                    </td>
+                                    <td> <?php echo $row['submission_date']; ?> </td>
+                                    <td> <?php echo $row['submission_grade']; ?> </td>
                                 </tr>
 
                                 <tr>
-                                    <td> Exercise 2 </td>
-                                    <td> file2.txt </td>
-                                    <td> April 16,2022 1:53am </td>
-                                    <td> No </td>
+                                    <td> 
+                                    <?php 
+                                    include('dbconnection.php');
+                                    $section = $_SESSION['section'];
+                                    $name = $_SESSION['name'];
+                                    $id = $_SESSION['coursecode'];
+                                    
+                                    $query = "SELECT * from deliverable WHERE course_section = '$section' and course_name = '$id'";
+
+                                    $result = mysqli_query($con, $query);  
+                                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+                                    $count = mysqli_num_rows($result);
+
+                                    while($row = mysqli_fetch_assoc($result)) {
+
+                                    echo $row['deliverable_title']; 
+                                    ?> 
+                                    </td>
+                                    <td> 
+                                    <?php
+                                    include('dbconnection.php');
+                                    $section = $_SESSION['section'];
+                                    $name = $_SESSION['name'];
+                                    $id = $_SESSION['coursecode'];
+                                    
+                                    $query = "SELECT * from submissions WHERE student_section = '$section' and course_name = '$id' and student_name = '$name'";
+
+                                    $result = mysqli_query($con, $query);  
+                                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+                                    $count = mysqli_num_rows($result);
+
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                    echo $row['submission_filename']; 
+                                    ?> 
+                                    </td>
+                                    <td> <?php echo $row['submission_date']; ?> </td>
+                                    <td> <?php echo $row['submission_grade']; ?> </td>
+
+                                    <?php }} ?>
                                 </tr>
 
-                                <tr>
-                                    <td> Exercise 3 </td>
-                                    <td> file3.txt </td>
-                                    <td> April 17,2022 2:53am </td>
-                                    <td> No </td>
-                                </tr>
+                                <?php include('submission_sort.php'); ?>
                 
                                 </tbody>
                             </table>
