@@ -36,8 +36,6 @@
                       </h4>
                       <br>
                       <p class="text-center" style="display: inline-block;">
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></a>
                       </p>
                       <br>
                     </div>
@@ -91,8 +89,6 @@
                       </h4>
                       <br>
                       <p class="text-center" style="display: inline-block;">
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></a>
                       </p>
                       <br>
                     </div>
@@ -146,8 +142,6 @@
                       </h4>
                       <br>
                       <p class="text-center" style="display: inline-block;">
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></a>
                       </p>
                       <br>
                     </div>
@@ -203,8 +197,6 @@
                       </h4>
                       <br>
                       <p class="text-center" style="display: inline-block;">
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></a>
                       </p>
                       <br>
                     </div>
@@ -258,8 +250,6 @@
                       </h4>
                       <br>
                       <p class="text-center" style="display: inline-block;">
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></a>
                       </p>
                       <br>
                     </div>
@@ -313,8 +303,6 @@
                       </h4>
                       <br>
                       <p class="text-center" style="display: inline-block;">
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></button></a>
-                      <a href="#"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></a>
                       </p>
                       <br>
                     </div>
