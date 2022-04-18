@@ -36,7 +36,7 @@
 				<p><iframe style="width:100%; height:40vh; overflow-y:scroll;"></iframe></p> <!--DITO LALABAS YUNG INUPLOAD NA FILE-->
 				
 				<center>
-				<button type="button" class="btn btn-default" style="width:18vw;  margin-top:1.2vh; background-color:#DB9A53; color: white;"><a href="#" style="color:white;">CHECK USING ONLINE COMPILER</a></button>
+				<button type="button" class="btn btn-default" style="width:18vw;  margin-top:1.2vh; background-color:#DB9A53; color: white;"><a href="https://www.onlinegdb.com/" target="_blank" style="color:white;">CHECK USING ONLINE COMPILER</a></button>
 				</center>
 				<!--LA PA LAMAN DAHIL SA DB LAMAN NITO??? -->
 			</div>
