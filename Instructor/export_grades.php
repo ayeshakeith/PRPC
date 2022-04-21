@@ -19,6 +19,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
         <?php include('class_announcement_style.php'); ?>
+		<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
     </head>
 
     <body style="background-color:#f1ece9; font-family: Poppins; overflow:hidden;">
@@ -30,25 +31,24 @@
 			</div>
 			
 			<div class = "container-fluid body-container">
-				<p style="font-size:35px; color:#DB9A53; text-align:center;">Student Submissions</p>
+				<p style="font-size:35px; color:#DB9A53; text-align:center;">Grades</p>
 				<hr style="border-top: 3px solid #fccb96; width: 15%">
 				<br>
 
-				<table class="table table-hover" id="submissiontable">
+				<table class="table table-hover" id="tbl_exporttable_to_xls">
 				   <tr>
 					<th onclick="sortTable(0)">Activity Name</th>
 					<th>Student Name</th>
 					<th onclick="sortTable(1)">File Name</th>
 					<th>Date & Time of Submission</th>
 					<th>Grade</th>
-					<th></th>
 				  </tr>
 				  </tr>
 				  <?php include('submission_authentication.php');
 				  ?>
 				  <form action="class_viewsubmission.php" method="POST">   
 				  
-				  <tr>
+				<tr>
 				  	  
 					  <td>
 						  <?php 
@@ -82,8 +82,7 @@
 						?>
 					  </td>
 					  <input name="gradeid" value="<?php echo $gradeid; ?>" style="border:0px; font-size:0px; width:0%; line-height: 0px;" hidden>
-					  <td><button type="submit">View</button></td>
-					  </tr>
+				</tr>
 				  
 				  </form>
 				  <?php 
@@ -123,19 +122,28 @@
 						?>
 					  </td>
 					  <input name="gradeid" value="<?php echo $gradeid; ?>" style="border:0px; font-size:0px; width:0%; line-height: 0px;" hidden>
-					  <td><button type="submit">View</button></td>
 				  </tr>
-				  
 				  <?php
 						}
 				  ?>
 				  </form>
-				</table>
+			</table>
+
+                <button id="downloadexcel" onclick="ExportToExcel('xlsx')" style="color: black; float: right; margin-top: 2%;"> Export Excel </button>
+
 			</div>
 
 			<?php include('submission_sort.php'); ?>
-            
-
             <footer class="footer-container"> </footer>
     </body>
 </html>
+
+<script>
+	function ExportToExcel(type, fn, dl) {
+       var elt = document.getElementById('tbl_exporttable_to_xls');
+       var wb = XLSX.utils.table_to_book(elt, { sheet: "<?php echo $_SESSION["classcode"] . " - " . $_SESSION["classsec"] ?>" });
+       return dl ?
+         XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
+         XLSX.writeFile(wb, fn || ('<?php echo $_SESSION["classcode"] . " - " . $_SESSION["classsec"] ?> - Grades.' + (type || 'xlsx')));
+    }
+</script>

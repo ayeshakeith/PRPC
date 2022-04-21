@@ -47,7 +47,7 @@
         <li><a href="class_announcement.php" style="color: white; font-size: 20px;"><i class="fa fa-bell" style="font-size:32px; color:white;"></i> &nbsp; ANNOUNCEMENT</a></li><br>
         <li><a href="class_activity.php" style="color: white; font-size: 20px;"><i class="fa fa-upload" style="font-size:32px; color:white;"></i> &nbsp;ACTIVITY</a></li>
         <li><a href="class_submissions.php" style="color: white; font-size: 20px;"><i class="fa fa-list" style="font-size:32px; color:white;"></i> &nbsp;SUBMISSIONS</a></li>
-		<li><a href="instructor_ungraded - mark.php" style="color: white; font-size: 20px;"><i class="fa fa-times" style="font-size:32px; color:white;"></i> &nbsp;EXPORT GRADES</a></li>
+		<li><a href="export_grades.php" style="color: white; font-size: 20px;"><i class="fa fa-times" style="font-size:32px; color:white;"></i> &nbsp;EXPORT GRADES</a></li>
         </ul>
         
     </div>
