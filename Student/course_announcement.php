@@ -109,7 +109,7 @@
             }
             
             .banner-area{
-                margin-top: 50px;
+                margin-top: 20px;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 background-color: #0e0a37;
@@ -171,12 +171,13 @@
                 </div>
                 </div> 
             -->
-
+            
             <div class="content">
                     <div class="student-sidebar">
-                        <!-- Hello, User is located in student_sidebar.php -->
+                        <!--Hello, User is located in student_sidebar.php -->
                         <?php include('course_sidebar.php'); ?> 
-                    </div>
+                        </div> 
+                    
 
                     <div class="banner-area">
                         <h1> <?php echo $_SESSION["coursecode"]; ?> </h1>
