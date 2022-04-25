@@ -109,7 +109,7 @@
             }
             
             .banner-area{
-                margin-top: 20px;
+                margin-top: 10px;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 background-color: #0e0a37;

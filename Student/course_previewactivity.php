@@ -109,7 +109,7 @@
             }
             
             .banner-area{
-                margin-top: 50px;
+                margin-top: 10px;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 background-color: #0e0a37;
@@ -129,6 +129,7 @@
             
             .content-box{
                 background-color: white;
+                position: relative;
                 margin: 0 auto;
                 margin-top: 1%;
                 width: 100%;
@@ -137,8 +138,20 @@
                 height: 83vh;
             }
 
+            .act-description{
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .upload-form{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+
             .align-center{
-                margin-top: 10%;
+                padding: 10px;
+                margin-top: 10px;
                 text-align: center;
             }
 
@@ -171,13 +184,15 @@
                     </div>
                     
                     <div class="content-area">
-                        <div class="content-box">
-                            <br>
+                        <div class="content-box" style="padding:10px;">
+                            
+                        <br>
                             <h2 style="text-align: center"> <?php echo $_SESSION["activitytitle"]; ?> </h2>
 
-                            <br>
+                            <hr style="width: 80%;">
 
-                            <h4> FILE PREVIEW </h4>
+
+                            <h5 style="padding-left: 20px; padding-top: 20px"> FILE PREVIEW </h5>
 
                             <?php
                                 if (isset($_POST['submit'])){
@@ -186,22 +201,21 @@
                                 }
                             ?>
 
-                            <?php 
-                                
-                                echo $_SESSION["activitydescription"];
+                            <div class="act-description">
+                                <?php 
+                                    
+                                    echo $_SESSION["activitydescription"];
 
-                            ?> 
+                                ?> 
+                            </div>
 
-                        <br><br>
-
-                        <div style="text-align: center;">
-                            <form action="submitactivity_authentication.php" method="post">
-                            <textarea name="filename" rows="1" cols="150"><?php echo $filename; ?></textarea>
-                            <textarea name="submissionfile" rows="8" cols="150" style="resize: none; overflow-y: scroll;"><?php echo $contents; ?></textarea>
-                            <div class="align-center" style="margin-top:55px;"> <input type="submit" name="submit" value="Submit"> </div>
-                            </form>
-                        </div>
-
+                            <div class="align-center"   >
+                                <form action="submitactivity_authentication.php" method="post">
+                                <textarea name="filename" rows="1" cols="150" readonly><?php echo $filename; ?></textarea>
+                                <textarea name="submissionfile" rows="12" cols="150" style="resize: none; overflow-y: scroll;" readonly><?php echo $contents; ?></textarea>
+                                <div class="upload-form align-center"> <input type="submit" name="submit" value="Submit"> </div>
+                            </div>
+                            
                         </div>
                     </div>
                 

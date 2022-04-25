@@ -109,7 +109,7 @@
             }
             
             .banner-area{
-                margin-top: 20px;
+                margin-top: 10px;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 background-color: #0e0a37;
@@ -136,6 +136,11 @@
                 border: 3px solid black;
                 vertical-align: top;
                 height: 83vh;
+            }
+
+            .align-center{
+                margin-top: 3%;
+                text-align: center;
             }
 
             .announcement-card{
